@@ -128,7 +128,8 @@ const AUDIO_ENTRIES = [
     color: 'primary',
     pngicon: 'CraigOutten_28x28.png',
     svgicon: 'craig-outten'
-  }, {
+  }, 
+{
     src: 'Gasp.mp3',
     label: 'Gasp',
     color: 'primary',
@@ -210,7 +211,14 @@ const AUDIO_ENTRIES = [
     src: 'SayWhat.mp3',
     label: 'Say What',
     color: 'primary'
-  }, {
+  }, 
+  {
+    src: 'ScreamingGoat.mp3',
+    label: 'Screaming Goat',
+    color: 'primary',
+    pngicon: 'Goat_24x24.png',
+    svgicon: 'goat'
+  },{
     src: 'StandUp.mp3',
     label: 'Stand Up',
     color: 'primary',
