@@ -43,3 +43,5 @@ npm install electron --save-dev
 ng build --prod
 
 npm install electron-packager cross-var --save-dev
+
+git config http.postBuffer 157286400
