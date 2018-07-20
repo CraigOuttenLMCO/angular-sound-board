@@ -231,7 +231,9 @@ const AUDIO_ENTRIES = [
   }, {
     src: 'ThatsAllFolks.mp3',
     label: 'Thats All Folks',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'Porky_24x24.png',
+    svgicon: 'porky'
   }, {
     src: 'ThatsFunny.mp3',
     label: 'That\'s Funny',
