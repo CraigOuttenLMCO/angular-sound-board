@@ -1,0 +1,17 @@
+
+mat-card.mat-card {
+    margin-bottom: 16px;
+}
+
+.mat-raised-button mat-icon, .mat-raised-button img  {
+    margin-left: -8px;
+    margin-right: 6px;
+}
+
+.mat-card-content button {
+    /*
+    margin-left: 5px;
+    margin-right: 5px;
+    */
+    margin: 8px;
+}

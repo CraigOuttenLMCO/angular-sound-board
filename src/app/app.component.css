@@ -1,0 +1,21 @@
+mat-toolbar.mat-toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+}
+
+.mat-toolbar-row div {
+    margin-left: 16px;
+}
+
+.app-toolbar {
+    margin-bottom: 20px;
+}
+
+div.content {
+    min-height: 100vh;
+    padding: 80px 3rem 1rem;
+}
