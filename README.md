@@ -4,13 +4,14 @@ A sound board application written with Angular. Make funny sounds to annoy/enter
 
 ## Getting Started
 
-Here are the tools used to get this up and running
+Here are the tools used to get this up and running:
 
 ### Prerequisites
 
 [VSCode Portable](https://go.microsoft.com/fwlink/?Linkid=850641)
 
 [NodeJS](https://nodejs.org/dist/v10.7.0/node-v10.7.0-win-x64.zip)
+
 [Git Portable 64-bit](https://github.com/git-for-windows/git/releases/download/v2.18.0.windows.1/PortableGit-2.18.0-64-bit.7z.exe)
 
 ### Installing
