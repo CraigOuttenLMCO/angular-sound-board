@@ -12,7 +12,9 @@
     "e2e": "ng e2e",
     "electron": "electron .",
     "electron-build": "ng build --prod && electron .",
-    "package:win": "ng build --prod && cross-var electron-packager . $npm_package_name-$npm_package_version --out=packages --platform=win32 --arch=all --overwrite "
+    "package:win": "ng build --prod && cross-var electron-packager . $npm_package_name-$npm_package_version --out=packages --platform=win32 --arch=all --overwrite",
+    "package:linux": "ng build --prod && cross-var electron-packager . $npm_package_name-$npm_package_version --out=packages --platform=linux --arch=all --overwrite",
+    "package:all": "ng build --prod && cross-var electron-packager . $npm_package_name-$npm_package_version --out=packages --all --arch=all --overwrite"
   },
   "private": true,
   "dependencies": {
