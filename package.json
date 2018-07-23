@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start-lm": "ng serve --host 158.183.133.199 --port 80",
+    "start-lm": "ng serve --host localhost --port 80",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
