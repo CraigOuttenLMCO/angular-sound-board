@@ -79,6 +79,12 @@ const AUDIO_ENTRIES = [
   }, {
   name: 'Office Sounds',
   audio: [{
+    src: 'TimAllenAeuhhh.mp3',
+    label: 'Aeuhhh',
+    color: 'primary',
+    pngicon: 'TimTaylor_24x24.png',
+    svgicon: 'tim-taylor'
+  }, {
     src: 'BadCough.mp3',
     label: 'Bad Cough',
     color: 'primary',
@@ -106,6 +112,12 @@ const AUDIO_ENTRIES = [
     color: 'primary',
     pngicon: 'PinkiePie_34x24.png',
     svgicon: 'pinkie-pie'
+  }, {
+    src: 'EffectiveCommunication.mp3',
+    label: 'Communication',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
   }, {
     src: 'Crickets.wav',
     label: 'Crickets',
@@ -192,7 +204,9 @@ const AUDIO_ENTRIES = [
   }, {
     src: 'OhHellNo.mp3',
     label: 'Oh Hell No',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'CrystalMiller2_19x24.png',
+    svgicon: 'crystal-miller'
   }, {
     src: 'OhWahAhAhAh.mp3',
     label: 'Oh WahAhAhAh',
