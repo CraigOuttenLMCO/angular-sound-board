@@ -140,8 +140,7 @@ const AUDIO_ENTRIES = [
     color: 'primary',
     pngicon: 'CraigOutten_28x28.png',
     svgicon: 'craig-outten'
-  }, 
-{
+  }, {
     src: 'Gasp.mp3',
     label: 'Gasp',
     color: 'primary',
@@ -225,8 +224,7 @@ const AUDIO_ENTRIES = [
     src: 'SayWhat.mp3',
     label: 'Say What',
     color: 'primary'
-  }, 
-  {
+  }, {
     src: 'ScreamingGoat.mp3',
     label: 'Screaming Goat',
     color: 'primary',
@@ -264,6 +262,12 @@ const AUDIO_ENTRIES = [
     src: 'What.mp3',
     label: 'What!',
     color: 'primary'
+  }, {
+    src: 'WhatDidYouCallMe.mp3',
+    label: 'What Did You Call Me',
+    color: 'primary',
+    pngicon: 'OakenFrozen_25x24.png',
+    svgicon: 'oaken-frozen'
   }, {
     src: 'Wrong.mp3',
     label: 'Wrong',
