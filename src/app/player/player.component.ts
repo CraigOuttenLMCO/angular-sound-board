@@ -103,6 +103,12 @@ const AUDIO_ENTRIES = [
     pngicon: 'OakenFrozen_25x24.png',
     svgicon: 'oaken-frozen'
   }, {
+    src: 'Breaker19.mp3',
+    label: 'Breaker 1-9',
+    color: 'primary',
+    pngicon: 'SemiTruck_35x24.png',
+    svgicon: 'semi-truck'
+  }, {
     src: 'ByeFelicia.mp3',
     label: 'Bye Felicia',
     color: 'primary'
@@ -112,6 +118,12 @@ const AUDIO_ENTRIES = [
     color: 'primary',
     pngicon: 'PinkiePie_34x24.png',
     svgicon: 'pinkie-pie'
+  }, {
+    src: 'Convoy.mp3',
+    label: 'Convoy',
+    color: 'primary',
+    pngicon: 'SemiTruck_35x24.png',
+    svgicon: 'semi-truck'
   }, {
     src: 'Crickets.wav',
     label: 'Crickets',
@@ -287,20 +299,14 @@ const AUDIO_ENTRIES = [
     pngicon: 'HeatherFleischmann2_24x42.png',
     svgicon: 'heather-fleischmann'
   }, {
-    src: 'IWasGreat.mp3',
-    label: 'I Was Great',
-    color: 'primary',
-    pngicon: 'HeatherFleischmann2_24x42.png',
-    svgicon: 'heather-fleischmann'
-  }, {
-    src: 'StevensonSoldMe.mp3',
-    label: 'Stevenson Sold Me',
-    color: 'primary',
-    pngicon: 'HeatherFleischmann2_24x42.png',
-    svgicon: 'heather-fleischmann'
-  }, {
     src: 'Graduated.mp3',
     label: 'Graduated',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
+    src: 'IWasGreat.mp3',
+    label: 'I Was Great',
     color: 'primary',
     pngicon: 'HeatherFleischmann2_24x42.png',
     svgicon: 'heather-fleischmann'
@@ -322,7 +328,13 @@ const AUDIO_ENTRIES = [
     color: 'primary',
     pngicon: 'HeatherFleischmann2_24x42.png',
     svgicon: 'heather-fleischmann'
-  },{
+  }, {
+    src: 'StevensonSoldMe.mp3',
+    label: 'Stevenson Sold Me',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
     divider: true
   }, {
     src: 'GonnaDoO.mp3',
