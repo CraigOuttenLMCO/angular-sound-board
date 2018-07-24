@@ -299,6 +299,30 @@ const AUDIO_ENTRIES = [
     pngicon: 'HeatherFleischmann2_24x42.png',
     svgicon: 'heather-fleischmann'
   }, {
+    src: 'Graduated.mp3',
+    label: 'Graduated',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
+    src: 'HeatherIsGreat.mp3',
+    label: 'I\'m Great',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
+    src: 'InternshipOriented.mp3',
+    label: 'Internship Oriented',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
+    src: 'Knowledge.mp3',
+    label: 'Knowledge',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  },{
     divider: true
   }, {
     src: 'GonnaDoO.mp3',
