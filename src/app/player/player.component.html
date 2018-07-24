@@ -61,7 +61,12 @@
 -->
 
   <mat-card *ngFor="let group of this.audioEntries">
-    <mat-card-title>{{group.name}}</mat-card-title>
+    <mat-card-title>
+      <span>{{group.name}}</span>
+        <button type="button" (click)="pause()" class="mat-small" *ngIf="pauseButton" mat-button color="secondary">
+            <mat-icon svgIcon="stop-button"></mat-icon>
+        </button>
+    </mat-card-title>
     <mat-card-content>
         <mat-divider></mat-divider>
         <span *ngFor="let audio of group.audio">

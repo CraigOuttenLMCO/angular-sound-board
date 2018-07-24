@@ -12,7 +12,6 @@ export class AppComponent {
 
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
     // Example from: https://alligator.io/angular/custom-svg-icons-angular-material/
-    this.matIconRegistry.addSvgIcon('michael-scott', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/MichaelScott.svg'));
-    this.matIconRegistry.addSvgIcon('rob-poole', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/RobPoole.svg'));
+    this.matIconRegistry.addSvgIcon('stop-button', this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/StopButton.svg'));
   }
 }

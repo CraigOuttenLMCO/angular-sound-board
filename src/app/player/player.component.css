@@ -9,9 +9,16 @@ mat-card.mat-card {
 }
 
 .mat-card-content button {
-    /*
-    margin-left: 5px;
-    margin-right: 5px;
-    */
     margin: 8px;
+}
+
+.mat-button.mat-small {
+    min-width: 1%;
+    min-height: 1%;
+}
+
+mat-card-title > span {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 10px;
 }

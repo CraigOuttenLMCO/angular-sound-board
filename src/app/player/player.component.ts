@@ -22,7 +22,9 @@ const AUDIO_ENTRIES = [
     }, {
       src: 'BlessYou.mp3',
       label: 'Bless You',
-      color: 'primary'
+      color: 'primary',
+      pngicon: 'TheSneeze_24x24.png',
+      svgicon: 'the-sneeze'
     }, {
       src: 'BottomsUp.mp3',
       label: 'Bottoms Up',
