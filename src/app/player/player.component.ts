@@ -113,12 +113,6 @@ const AUDIO_ENTRIES = [
     pngicon: 'PinkiePie_34x24.png',
     svgicon: 'pinkie-pie'
   }, {
-    src: 'EffectiveCommunication.mp3',
-    label: 'Communication',
-    color: 'primary',
-    pngicon: 'HeatherFleischmann2_24x42.png',
-    svgicon: 'heather-fleischmann'
-  }, {
     src: 'Crickets.wav',
     label: 'Crickets',
     color: 'primary'
@@ -285,7 +279,27 @@ const AUDIO_ENTRIES = [
     label: 'Yeah',
     color: 'primary'
   }, {
-    newline: true
+    divider: true
+  }, {
+    src: 'EffectiveCommunication.mp3',
+    label: 'Communication',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
+    src: 'IWasGreat.mp3',
+    label: 'I Was Great',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
+    src: 'StevensonSoldMe.mp3',
+    label: 'Stevenson Sold Me',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
+    divider: true
   }, {
     src: 'GonnaDoO.mp3',
     label: 'Gonna DoO',

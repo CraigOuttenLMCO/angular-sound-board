@@ -63,15 +63,15 @@
   <mat-card *ngFor="let group of this.audioEntries">
     <mat-card-title>{{group.name}}</mat-card-title>
     <mat-card-content>
+        <mat-divider></mat-divider>
         <span *ngFor="let audio of group.audio">
         <button
           (click)="playAudio(audio.src)"
           *ngIf="playButton"
           mat-raised-button
           color="{{audio.color}}">
-          <img *ngIf="audio.pngicon" src="assets/images/{{audio.pngicon}}">
-          <!--<mat-icon *ngIf="audio.svgicon" svgIcon="{{audio.svgicon}}"></mat-icon>-->{{audio.label}}</button>
-          <br *ngIf="audio.newline">
+          <img *ngIf="audio.pngicon" src="assets/images/{{audio.pngicon}}">{{audio.label}}</button>
+          <span *ngIf="audio.divider === true"><br/><mat-divider></mat-divider></span>
         </span>
     </mat-card-content>
   </mat-card>
