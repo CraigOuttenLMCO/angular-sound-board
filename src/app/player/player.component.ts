@@ -115,6 +115,10 @@ const AUDIO_ENTRIES = [
     label: 'Bye Felicia',
     color: 'primary'
   }, {
+    src: 'CashMeOutside.mp3',
+    label: 'Cash Me Outside',
+    color: 'primary'
+  }, {
     src: 'CelebrateBirthday.mp3',
     label: 'Celebrate Birthday',
     color: 'primary',
