@@ -181,6 +181,12 @@ const AUDIO_ENTRIES = [
     pngicon: 'SpongeBob_17x24.png',
     svgicon: 'sponge-bob'
   }, {
+    src: 'ItsSoFluffy.mp3',
+    label: 'It\'s So Fluffy',
+    color: 'primary',
+    pngicon: 'TheMinion_21x28.png',
+    svgicon: 'the-minion'
+  }, {
     src: 'LightBulb.mp3',
     label: 'Light Bulb',
     color: 'primary',
@@ -202,6 +208,12 @@ const AUDIO_ENTRIES = [
     src: 'Meatloaf.mp3',
     label: 'Meatloaf',
     color: 'primary'
+  }, {
+    src: 'MyPrecious.mp3',
+    label: 'My Precious',
+    color: 'primary',
+    pngicon: 'Gollum_24x24.png',
+    svgicon: 'the-gollum'
   }, {
     src: 'NoGodNo.mp3',
     label: 'No God No',
@@ -299,6 +311,18 @@ const AUDIO_ENTRIES = [
   }, {
     divider: true
   }, {
+    src: 'Businesses.mp3',
+    label: 'Businesses',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
+    src: 'Connections.mp3',
+    label: 'Connections',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
     src: 'EffectiveCommunication.mp3',
     label: 'Communication',
     color: 'primary',
@@ -337,6 +361,12 @@ const AUDIO_ENTRIES = [
   }, {
     src: 'StevensonSoldMe.mp3',
     label: 'Stevenson Sold Me',
+    color: 'primary',
+    pngicon: 'HeatherFleischmann2_24x42.png',
+    svgicon: 'heather-fleischmann'
+  }, {
+    src: 'Stutter.mp3',
+    label: 'Stutter',
     color: 'primary',
     pngicon: 'HeatherFleischmann2_24x42.png',
     svgicon: 'heather-fleischmann'
