@@ -241,6 +241,12 @@ const AUDIO_ENTRIES = [
     pngicon: 'PinkiePie_34x24.png',
     svgicon: 'pinkie-pie'
   }, {
+    src: 'Respect.mp3',
+    label: 'Respect',
+    color: 'primary',
+    pngicon: 'FlyingV_31x24.png',
+    svgicon: 'flyingv-guitar'
+  }, {
     src: 'RunAway.mp3',
     label: 'Run Away',
     color: 'primary'
@@ -292,6 +298,12 @@ const AUDIO_ENTRIES = [
     color: 'primary',
     pngicon: 'OakenFrozen_25x24.png',
     svgicon: 'oaken-frozen'
+  }, {
+    src: 'WhatDidYouSay.mp3',
+    label: 'What Did You Say',
+    color: 'primary',
+    pngicon: 'FlyingV_31x24.png',
+    svgicon: 'flyingv-guitar'
   }, {
     src: 'Wrong.mp3',
     label: 'Wrong',
@@ -413,6 +425,7 @@ export class PlayerComponent implements OnInit, AfterViewInit {
   @Input() pauseButton: boolean = true;
   @Input() selectableButton: boolean = false;
   @Input() muteButton: boolean = false;
+  @Input() poopButton: boolean = false;
   
   /** Array of audio tracks.*/
   @Input() src: Array<string> = [];
