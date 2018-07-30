@@ -181,6 +181,12 @@ const AUDIO_ENTRIES = [
     pngicon: 'SpongeBob_17x24.png',
     svgicon: 'sponge-bob'
   }, {
+    src: 'InThePot.mp3',
+    label: 'In The Pot',
+    color: 'primary',
+    pngicon: 'KevinMalone_28x28.png',
+    svgicon: 'kevin-malone'
+  }, {
     src: 'ItsSoFluffy.mp3',
     label: 'It\'s So Fluffy',
     color: 'primary',
@@ -208,6 +214,12 @@ const AUDIO_ENTRIES = [
     src: 'Meatloaf.mp3',
     label: 'Meatloaf',
     color: 'primary'
+  }, {
+    src: 'MyDogsAreBarking.mp3',
+    label: 'My Dogs Are Barking',
+    color: 'primary',
+    pngicon: 'KevinMalone_28x28.png',
+    svgicon: 'kevin-malone'
   }, {
     src: 'MyPrecious.mp3',
     label: 'My Precious',
@@ -288,6 +300,12 @@ const AUDIO_ENTRIES = [
     color: 'primary',
     pngicon: 'CellPhone_20x24.png',
     svgicon: 'cell-phone'
+  }, {
+    src: 'WantAnMnM.mp3',
+    label: 'Want An M&M',
+    color: 'primary',
+    pngicon: 'KevinMalone_28x28.png',
+    svgicon: 'kevin-malone'
   }, {
     src: 'What.mp3',
     label: 'What!',

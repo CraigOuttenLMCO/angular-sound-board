@@ -1,0 +1,28 @@
+
+mat-card.mat-card {
+    margin-bottom: 16px;
+}
+
+.mat-raised-button mat-icon, .mat-raised-button img  {
+    margin-left: -8px;
+    margin-right: 6px;
+}
+
+.matTabIcon {
+    margin-right: 6px;
+}
+
+.mat-card-content button {
+    margin: 8px;
+}
+
+.mat-button.mat-small {
+    min-width: 1%;
+    min-height: 1%;
+}
+
+mat-card-title > span {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 10px;
+}
