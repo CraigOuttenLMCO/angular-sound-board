@@ -63,7 +63,9 @@ const READY_QUEUE_SOUNDS = [
   }, {
     src: 'ShhShort.mp3',
     label: 'Shh (Short)',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'CraigOutten_28x28.png',
+    svgicon: 'craig-outten'
   }
 ];
 
@@ -120,7 +122,9 @@ const FUNNY_SOUNDS = [
       }, {
         src: 'Crickets.wav',
         label: 'Crickets',
-        color: 'primary'
+        color: 'primary',
+        pngicon: 'Cricket_38x24.png',
+        svgicon: 'the-cricket'
       }, {
         src: 'Fart.mp3',
         label: 'Fart',

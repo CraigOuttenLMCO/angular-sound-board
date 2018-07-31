@@ -7,10 +7,6 @@ mat-toolbar.mat-toolbar {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
 }
 
-.mat-toolbar-row div {
-    margin-left: 16px;
-}
-
 .app-toolbar {
     margin-bottom: 20px;
 }
@@ -18,4 +14,13 @@ mat-toolbar.mat-toolbar {
 div.content {
     min-height: 100vh;
     padding: 80px 3rem 1rem;
+}
+
+.toolbar-icon {
+    padding: 8px 14px 0 14px;
+    width: 48px;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
 }

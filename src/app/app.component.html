@@ -1,15 +1,18 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar class="app-toolbar no-print mat-toolbar mat-primary mat-toolbar-multiple-rows" color="primary">
+<!--
+    class="... mat-toolbar-row class="notification-container mat-toolbar-row"
+-->
+<mat-toolbar class="app-toolbar no-print mat-toolbar mat-primary" color="primary">
     <mat-toolbar-row class="notification-container mat-toolbar-row">
-        <img width="48" alt="Angular Logo" src="assets/images/logo.png">
-        <div>{{ title }}</div>
+        <span><img class="toolbar-icon" alt="Angular Soundbaord Logo" src="assets/images/logo.png"></span>
+        <span>{{ title }}</span>
+        <span class="toolbar-spacer"></span>
+        <span>
+            <button mat-button [routerLink]="['/legacyboard']" routerLinkActive="mat-accent" color="secondary">Legacy Board</button>
+            <button mat-button [routerLink]="['/tabbedboard']" routerLinkActive="mat-accent" color="secondary">Tabbed Board</button>
+        </span>
     </mat-toolbar-row>
 </mat-toolbar>
 
 <div class="content">
-    <!--
-    <app-player></app-player>
-    -->
-    
     <router-outlet></router-outlet>
 </div>

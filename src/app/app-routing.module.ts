@@ -6,14 +6,14 @@ import { TabbedPlayerComponent } from './tabbed-player/tabbed-player.component';
 
 const routes: Routes = [
   {
-    path: 'board',
+    path: 'legacyboard',
     component: PlayerComponent
   }, {
     path: 'tabbedboard',
     component: TabbedPlayerComponent
   }, {
     path: '',
-    redirectTo: 'board',
+    redirectTo: 'legacyboard',
     pathMatch: 'full'
   }
 ];

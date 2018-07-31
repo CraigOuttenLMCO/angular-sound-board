@@ -76,7 +76,9 @@ const AUDIO_ENTRIES = [
     }, {
       src: 'ShhShort.mp3',
       label: 'Shh (Short)',
-      color: 'primary'
+      color: 'primary',
+      pngicon: 'CraigOutten_28x28.png',
+      svgicon: 'craig-outten'
     }, ]
   }, {
   name: 'Office Sounds',
@@ -133,7 +135,9 @@ const AUDIO_ENTRIES = [
   }, {
     src: 'Crickets.wav',
     label: 'Crickets',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'Cricket_38x24.png',
+    svgicon: 'the-cricket'
   }, {
     src: 'FangirlSqueal.mp3',
     label: 'Fangirl Squeal',
