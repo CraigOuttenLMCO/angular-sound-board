@@ -54,7 +54,9 @@ const AUDIO_ENTRIES = [
     }, {
       src: 'Hello.mp3',
       label: 'Hello',
-      color: 'primary'
+      color: 'primary',
+      pngicon: 'OfficePhone_28x24.png',
+      svgicon: 'office-phone'
     }, {
       src: 'Motorcycle.mp3',
       label: 'Motorcycle',
@@ -89,6 +91,12 @@ const AUDIO_ENTRIES = [
       color: 'primary',
       pngicon: 'CraigOutten_28x28.png',
       svgicon: 'craig-outten'
+    }, {
+      src: 'StandUp.mp3',
+      label: 'Stand Up',
+      color: 'primary',
+      pngicon: 'RobPoole_24x24_2.png',
+      svgicon: 'rob-poole'
     }, {
       src: 'YoureWelcome.mp3',
       label: 'You\'re Welcome',
@@ -219,6 +227,18 @@ const AUDIO_ENTRIES = [
     pngicon: 'TheMinion_21x28.png',
     svgicon: 'the-minion'
   }, {
+    src: 'JustAMoment.mp3',
+    label: 'Just A Moment',
+    color: 'primary',
+    pngicon: 'BillLumbergh_28x28.png',
+    svgicon: 'bill-lumbergh'
+  }, {
+    src: 'JustAMomentFull.mp3',
+    label: 'Just A Moment (Full)',
+    color: 'primary',
+    pngicon: 'BillLumbergh_28x28.png',
+    svgicon: 'bill-lumbergh'
+  }, {
     src: 'LightBulb.mp3',
     label: 'Light Bulb',
     color: 'primary',
@@ -302,12 +322,6 @@ const AUDIO_ENTRIES = [
     color: 'primary',
     pngicon: 'Goat_24x24.png',
     svgicon: 'goat'
-  },{
-    src: 'StandUp.mp3',
-    label: 'Stand Up',
-    color: 'primary',
-    pngicon: 'RobPoole_24x24_2.png',
-    svgicon: 'rob-poole'
   }, {
     src: 'SufferinSuccotash.mp3',
     label: 'Sufferin\' Succotash',

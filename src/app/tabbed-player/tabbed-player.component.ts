@@ -136,6 +136,18 @@ const FUNNY_SOUNDS = [
         label: 'Gorilla',
         color: 'primary'
       }, {
+        src: 'JustAMoment.mp3',
+        label: 'Just A Moment',
+        color: 'primary',
+        pngicon: 'BillLumbergh_28x28.png',
+        svgicon: 'bill-lumbergh'
+      }, {
+        src: 'JustAMomentFull.mp3',
+        label: 'Just A Moment (Full)',
+        color: 'primary',
+        pngicon: 'BillLumbergh_28x28.png',
+        svgicon: 'bill-lumbergh'
+      }, {
         src: 'MyPrecious.mp3',
         label: 'My Precious',
         color: 'primary',
