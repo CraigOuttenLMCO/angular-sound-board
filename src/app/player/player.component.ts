@@ -18,7 +18,9 @@ const AUDIO_ENTRIES = [
     audio: [{
       src: 'BaDumTss.mp3',
       label: 'Ba Dum Tss',
-      color: 'primary'
+      color: 'primary',
+      pngicon: 'Drum_24x24.png',
+      svgicon: 'the-drum'
     }, {
       src: 'BlessYou.mp3',
       label: 'Bless You',
@@ -34,7 +36,15 @@ const AUDIO_ENTRIES = [
     }, {
       src: 'Drama.mp3',
       label: 'Drama',
-      color: 'primary'
+      color: 'primary',
+      pngicon: 'Drama_38x24.png',
+      svgicon: 'the-drama'
+    }, {
+      src: 'Fart.mp3',
+      label: 'Fart',
+      color: 'primary',
+      pngicon: 'CraigOutten_28x28.png',
+      svgicon: 'craig-outten'
     }, {
       src: 'GoodMorningFolks.mp3',
       label: 'Good Morning Folks',
@@ -79,7 +89,11 @@ const AUDIO_ENTRIES = [
       color: 'primary',
       pngicon: 'CraigOutten_28x28.png',
       svgicon: 'craig-outten'
-    }, ]
+    }, {
+      src: 'YoureWelcome.mp3',
+      label: 'You\'re Welcome',
+      color: 'primary'
+    }]
   }, {
   name: 'Office Sounds',
   audio: [{
@@ -113,9 +127,23 @@ const AUDIO_ENTRIES = [
     pngicon: 'SemiTruck_35x24.png',
     svgicon: 'semi-truck'
   }, {
+    src: 'Burn.mp3',
+    label: 'Burn (Short)',
+    color: 'primary',
+    pngicon: 'MichaelKelso_28x28.png',
+    svgicon: 'michael-kelso'
+  }, {
+    src: 'Burn2.mp3',
+    label: 'Burn (Long)',
+    color: 'primary',
+    pngicon: 'MichaelKelso_28x28.png',
+    svgicon: 'michael-kelso'
+  }, {
     src: 'ByeFelicia.mp3',
     label: 'Bye Felicia',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'ByeFelicia_28x28.png',
+    svgicon: 'bye-felicia'
   }, {
     src: 'CashMeOutside.mp3',
     label: 'Cash Me Outside',
@@ -150,12 +178,6 @@ const AUDIO_ENTRIES = [
     color: 'primary',
     pngicon: 'PinkiePie_34x24.png',
     svgicon: 'pinkie-pie'
-  }, {
-    src: 'Fart.mp3',
-    label: 'Fart',
-    color: 'primary',
-    pngicon: 'CraigOutten_28x28.png',
-    svgicon: 'craig-outten'
   }, {
     src: 'Gasp.mp3',
     label: 'Gasp',
@@ -217,7 +239,9 @@ const AUDIO_ENTRIES = [
   }, {
     src: 'Meatloaf.mp3',
     label: 'Meatloaf',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'WillFerrell_18x28.png',
+    svgicon: 'will-ferrell'
   }, {
     src: 'MyDogsAreBarking.mp3',
     label: 'My Dogs Are Barking',
@@ -239,7 +263,9 @@ const AUDIO_ENTRIES = [
   }, {
     src: 'NotTheMama.mp3',
     label: 'Not The Mama',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'BebeDinosaurio_28x24.png',
+    svgicon: 'bebe-dinosaurio'
   }, {
     src: 'OhHellNo.mp3',
     label: 'Oh Hell No',
@@ -285,7 +311,9 @@ const AUDIO_ENTRIES = [
   }, {
     src: 'SufferinSuccotash.mp3',
     label: 'Sufferin\' Succotash',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'SylvesterCat_13x24.png',
+    svgicon: 'sylvester-cat'
   }, {
     src: 'ThatsAllFolks.mp3',
     label: 'Thats All Folks',
@@ -333,11 +361,15 @@ const AUDIO_ENTRIES = [
   }, {
     src: 'WrongWrongWrong.mp3',
     label: 'Wrong Wrong Wrong',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'DrPerryCox_18x28.png',
+    svgicon: 'drperry-cox'
   }, {
     src: 'Yay.mp3',
     label: 'Yaaaaaaay',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'Cheering_19x28.png',
+    svgicon: 'kids-cheering'
   }, {
     src: 'Yeah.mp3',
     label: 'Yeah',
