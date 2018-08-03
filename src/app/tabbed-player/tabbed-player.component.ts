@@ -67,6 +67,12 @@ const READY_QUEUE_SOUNDS = [
     pngicon: 'PinkiePie_34x24.png',
     svgicon: 'pinkie-pie'
   }, {
+    src: 'ShhCraigPicky.mp3',
+    label: 'Shh (Craig Picky)',
+    color: 'primary',
+    pngicon: 'PinkiePie_34x24.png',
+    svgicon: 'pinkie-pie'
+  }, {
     src: 'ShhNotHelping.mp3',
     label: 'Shh Not Helping',
     color: 'primary',
@@ -118,7 +124,9 @@ const FUNNY_SOUNDS = [
       }, {
         src: 'CashMeOutside.mp3',
         label: 'Cash Me Outside',
-        color: 'primary'
+        color: 'primary',
+        pngicon: 'CashMeOutside_28x28.png',
+        svgicon: 'cashme-outside'
       }, {
         src: 'Convoy.mp3',
         label: 'Convoy',
@@ -135,6 +143,18 @@ const FUNNY_SOUNDS = [
         src: 'Gorilla.mp3',
         label: 'Gorilla',
         color: 'primary'
+      }, {
+        src: 'ImNotSellingIt.mp3',
+        label: 'I\'m Not Selling It',
+        color: 'primary',
+        pngicon: 'RobPoole_24x24_2.png',
+        svgicon: 'rob-poole'
+      }, {
+        src: 'IOwnTheHouse.mp3',
+        label: 'I Own The House',
+        color: 'primary',
+        pngicon: 'RobPoole_24x24_2.png',
+        svgicon: 'rob-poole'
       }, {
         src: 'JustAMoment.mp3',
         label: 'Just A Moment',
@@ -172,7 +192,9 @@ const FUNNY_SOUNDS = [
       }, {
         src: 'RunAway.mp3',
         label: 'Run Away',
-        color: 'primary'
+        color: 'primary',
+        pngicon: 'HolyGrail_13x24.png',
+        svgicon: 'holy-grail'
       }, {
         src: 'SayWhat.mp3',
         label: 'Say What',
@@ -244,6 +266,12 @@ const FUNNY_SOUNDS = [
         color: 'primary',
         pngicon: 'TheMinion_21x28.png',
         svgicon: 'the-minion'
+      }, {
+        src: 'WeJumpedOutAWindow.mp3',
+        label: 'Jumped Out A Window',
+        color: 'primary',
+        pngicon: 'Baymax_22x24.png',
+        svgicon: 'the-baymax'
       }, {
         src: 'LightBulb.mp3',
         label: 'Light Bulb',
@@ -800,6 +828,12 @@ const FUNNY_SOUNDS = [
         color: 'primary',
         pngicon: 'MichaelKelso_28x28.png',
         svgicon: 'michael-kelso'
+      }, {
+        src: 'HiHoNeighbor.mp3',
+        label: 'Hi Ho Neighbor',
+        color: 'primary',
+        pngicon: 'TimTaylor_24x24.png',
+        svgicon: 'tim-taylor'
       }, {
         src: 'InThePot.mp3',
         label: 'In The Pot',

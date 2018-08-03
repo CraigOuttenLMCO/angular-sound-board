@@ -80,6 +80,12 @@ const AUDIO_ENTRIES = [
       pngicon: 'PinkiePie_34x24.png',
       svgicon: 'pinkie-pie'
     }, {
+      src: 'ShhCraigPicky.mp3',
+      label: 'Shh (Craig Picky)',
+      color: 'primary',
+      pngicon: 'PinkiePie_34x24.png',
+      svgicon: 'pinkie-pie'
+    }, {
       src: 'ShhNotHelping.mp3',
       label: 'Shh Not Helping',
       color: 'primary',
@@ -155,7 +161,9 @@ const AUDIO_ENTRIES = [
   }, {
     src: 'CashMeOutside.mp3',
     label: 'Cash Me Outside',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'CashMeOutside_28x28.png',
+    svgicon: 'cashme-outside'
   }, {
     src: 'CelebrateBirthday.mp3',
     label: 'Celebrate Birthday',
@@ -203,11 +211,23 @@ const AUDIO_ENTRIES = [
     label: 'Gorilla',
     color: 'primary'
   }, {
+    src: 'HiHoNeighbor.mp3',
+    label: 'Hi Ho Neighbor',
+    color: 'primary',
+    pngicon: 'TimTaylor_24x24.png',
+    svgicon: 'tim-taylor'
+  }, {
     src: 'IDidIt.mp3',
     label: 'I Did It',
     color: 'primary',
     pngicon: 'PinkiePie_34x24.png',
     svgicon: 'pinkie-pie'
+  }, {
+    src: 'ImNotSellingIt.mp3',
+    label: 'I\'m Not Selling It',
+    color: 'primary',
+    pngicon: 'RobPoole_24x24_2.png',
+    svgicon: 'rob-poole'
   }, {
     src: 'ImReady.mp3',
     label: 'I\'m Ready',
@@ -221,11 +241,23 @@ const AUDIO_ENTRIES = [
     pngicon: 'KevinMalone_28x28.png',
     svgicon: 'kevin-malone'
   }, {
+    src: 'IOwnTheHouse.mp3',
+    label: 'I Own The House',
+    color: 'primary',
+    pngicon: 'RobPoole_24x24_2.png',
+    svgicon: 'rob-poole'
+  }, {
     src: 'ItsSoFluffy.mp3',
     label: 'It\'s So Fluffy',
     color: 'primary',
     pngicon: 'TheMinion_21x28.png',
     svgicon: 'the-minion'
+  }, {
+    src: 'WeJumpedOutAWindow.mp3',
+    label: 'We Jumped Out A Window',
+    color: 'primary',
+    pngicon: 'Baymax_22x24.png',
+    svgicon: 'the-baymax'
   }, {
     src: 'JustAMoment.mp3',
     label: 'Just A Moment',
@@ -311,7 +343,9 @@ const AUDIO_ENTRIES = [
   }, {
     src: 'RunAway.mp3',
     label: 'Run Away',
-    color: 'primary'
+    color: 'primary',
+    pngicon: 'HolyGrail_13x24.png',
+    svgicon: 'holy-grail'
   }, {
     src: 'SayWhat.mp3',
     label: 'Say What',
