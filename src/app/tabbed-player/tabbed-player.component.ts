@@ -73,17 +73,35 @@ const READY_QUEUE_SOUNDS = [
     pngicon: 'PinkiePie_34x24.png',
     svgicon: 'pinkie-pie'
   }, {
-    src: 'ShhNotHelping.mp3',
-    label: 'Shh Not Helping',
+    src: 'ShhKnockKnock.mp3',
+    label: 'Shh (Knock Knock)',
     color: 'primary',
-    pngicon: 'PinkiePie_34x24.png',
-    svgicon: 'pinkie-pie'
+    pngicon: 'DrEvil_28x28.png',
+    svgicon: 'dr-evil'
+  }, {
+    src: 'ShhLittleStory.mp3',
+    label: 'Shh (Little Story)',
+    color: 'primary',
+    pngicon: 'DrEvil_28x28.png',
+    svgicon: 'dr-evil'
   }, {
     src: 'ShhShort.mp3',
     label: 'Shh (Short)',
     color: 'primary',
     pngicon: 'CraigOutten_28x28.png',
     svgicon: 'craig-outten'
+  }, {
+    src: 'ShhWholeBag.mp3',
+    label: 'Shh (Whole Bag)',
+    color: 'primary',
+    pngicon: 'DrEvil_28x28.png',
+    svgicon: 'dr-evil'
+  }, {
+    src: 'ShhNotHelping.mp3',
+    label: 'Shh Not Helping',
+    color: 'primary',
+    pngicon: 'PinkiePie_34x24.png',
+    svgicon: 'pinkie-pie'
   }, {
     src: 'StandUp.mp3',
     label: 'Stand Up',
