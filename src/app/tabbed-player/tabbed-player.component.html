@@ -1,11 +1,11 @@
-<audio #audioplayer
-         [src]="source"
-         [autoplay]="autoplay"
-         [controls]="controls"
-         [volume]="volume"
-         [loop]="loop"
-         [preload]="preload"
-         [muted]="muted"
+  <audio #audioplayer
+    [src]="source"
+    [autoplay]="autoplay"
+    [controls]="controls"
+    [volume]="volume"
+    [loop]="loop"
+    [preload]="preload"
+    [muted]="muted"
     >
   </audio>
 
@@ -62,7 +62,22 @@
             <img *ngIf="audio.pngicon" src="assets/images/{{audio.pngicon}}">{{audio.label}}</button>
             <span *ngIf="audio.divider === true"><br/><mat-divider></mat-divider></span>
           </span>
+
+          <!-- Testing -->
+          <!--
+          <span>
+            <button
+              (click)="playAudioMultiple(['Shh.mp3', 'Hello.mp3', 'BaDumTss.mp3'])"
+              *ngIf="playButton"
+              mat-raised-button
+              color="primary">
+              Play Multiple
+            </button>
+          </span>
+          -->
+          <!-- End Testing -->
         </mat-tab>
+
         <!--
         <mat-tab label="Two">
           <ng-template mat-tab-label>
@@ -72,7 +87,7 @@
           Content 1 (buttons here)
         </mat-tab>
         -->
-      </mat-tab-group>      
+      </mat-tab-group>
     </mat-card-content>
   </mat-card>
 

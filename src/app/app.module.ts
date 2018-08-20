@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { TabbedPlayerComponent } from './tabbed-player/tabbed-player.component';
+import { SoundService } from './sound.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { TabbedPlayerComponent } from './tabbed-player/tabbed-player.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    SoundService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
