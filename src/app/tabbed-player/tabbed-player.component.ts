@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy, AfterViewInit, HostListener } from '@angular/core';
 import { Input, Output, ViewChild, EventEmitter } from '@angular/core';
 
-import { READY_QUEUE_SOUNDS, FUNNY_SOUNDS } from './audio';
+import { AUDIO_GROUPS, AudioGroup } from './audio';
 import { SoundService, AudioItem } from '../sound.service';
+import { AudioEntry, AudioCategory } from '../audio';
 
 @Component({
   selector: 'app-tabbed-player',
@@ -11,8 +12,8 @@ import { SoundService, AudioItem } from '../sound.service';
 })
 export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   source: string;
-  readyQueueSounds: any = READY_QUEUE_SOUNDS;
-  funnySounds: any = FUNNY_SOUNDS;
+  readyAudioEntries:AudioEntry[] = [];
+  audioGroups:AudioGroup[] = AUDIO_GROUPS;
   selectedTab: number = 0;
   
   /** Buttons */
@@ -52,7 +53,10 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
 
   @ViewChild('audioplayer') player: any;
 
-  constructor(private soundService:SoundService) { }
+  constructor(private soundService:SoundService) {
+    this.readyAudioEntries = this.groupAudio(AudioCategory.Ready);
+    //console.log('Ready Audio Entries:', this.readyAudioEntries);
+   }
 
   ngOnInit() {
   }
@@ -73,6 +77,10 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
     //this.player.nativeElement.removeEventListener('ended', this.onAudioEnded, false);
     // working --> this.player.nativeElement.removeEventListener('ended', this.audioEndedCallback, true);
     this.soundService.removeAudioPlayer(this.player);
+  }
+
+  groupAudio(category:AudioCategory): AudioEntry[] {
+    return this.soundService.audioEntries(category);
   }
 
   onAudioStarted(event:any): void {

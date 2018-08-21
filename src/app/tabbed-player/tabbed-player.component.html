@@ -22,18 +22,18 @@
     </mat-card-title>
     <mat-card-content>
         <mat-divider></mat-divider>
-        <span *ngFor="let audio of this.readyQueueSounds">
+        <span *ngFor="let audio of this.readyAudioEntries">
         <button
-          (click)="playAudio(audio.src)"
+          (click)="playAudio(audio.source)"
           *ngIf="playButton"
           mat-raised-button
-          color="{{audio.color}}">
-          <img *ngIf="audio.pngicon" src="assets/images/{{audio.pngicon}}">{{audio.label}}</button>
+          color="{{audio.color ? audio.color : 'primary'}}">
+          <img *ngIf="audio.icon" src="assets/images/{{audio.icon}}">{{audio.label}}</button>
         </span>
     </mat-card-content>
   </mat-card>
 
-  <!-- Other Funny Sounds -->
+  <!-- Other, Non-Ready Queue Sounds -->
   <mat-card>
     <mat-card-title>
       <span>Office</span>
@@ -48,18 +48,18 @@
     <mat-card-content>
       <mat-divider></mat-divider>
       <mat-tab-group [(selectedIndex)]="selectedTab">
-        <mat-tab *ngFor="let group of this.funnySounds" label="{{group.label}}">
+        <mat-tab *ngFor="let group of this.audioGroups" label="{{group.label ? group.label : group.category}}">
           <ng-template mat-tab-label>
-            <img *ngIf="group.pngicon" src="assets/images/{{group.pngicon}}" class="matTabIcon">
-            {{group.name}}
+            <img *ngIf="group.icon" src="assets/images/{{group.icon}}" class="matTabIcon">
+            {{group.category}}
           </ng-template>
-          <span *ngFor="let audio of group.audio">
+          <span *ngFor="let audio of groupAudio(group.category)">
             <button
-              (click)="playAudio(audio.src)"
+              (click)="playAudio(audio.source)"
               *ngIf="playButton"
               mat-raised-button
-              color="{{audio.color}}">
-            <img *ngIf="audio.pngicon" src="assets/images/{{audio.pngicon}}">{{audio.label}}</button>
+              color="{{audio.color ? audio.color : 'primary'}}">
+            <img *ngIf="audio.icon" src="assets/images/{{audio.icon}}">{{audio.label}}</button>
             <span *ngIf="audio.divider === true"><br/><mat-divider></mat-divider></span>
           </span>
 

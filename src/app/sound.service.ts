@@ -1,12 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
-
-export interface AudioEntry {
-  label: string;
-  category: string;
-  source: string;
-  color?: string; // defaults to 'primary'
-  icon?: string;
-};
+import { AUDIO_ENTRIES, AudioEntry, AudioCategory } from './audio';
 
 export interface AudioEvent /*extends Event*/ {
   type: string;
@@ -21,6 +14,7 @@ export interface AudioItem {
   providedIn: 'root'
 })
 export class SoundService {
+  readyEntries:AudioEntry[] = [];
   private player: any;
   private audioFiles:AudioItem[] = [];
 
@@ -39,6 +33,20 @@ export class SoundService {
 
   constructor() {
     //console.log("SoundService being constructed");
+
+    this.readyEntries = AUDIO_ENTRIES.filter(entry => {
+      return entry.category === AudioCategory.Ready;
+    });
+  }
+
+  public audioEntries(category:AudioCategory):AudioEntry[] {
+    let entries:AudioEntry[] = [];
+
+    entries = AUDIO_ENTRIES.filter(entry => {
+      return entry.category === category;
+    });
+
+    return entries;
   }
 
   public mute(): void {
@@ -115,10 +123,10 @@ export class SoundService {
   }
 
   public removeAudioPlayer(player:any):void {
-    this.player = undefined;
     //console.log('[SoundService:removeAudioPlayer]', this);
 
     this.player.nativeElement.removeEventListener('ended', this.audioEndedCallback, true);
+    this.player = undefined;
   }
 
   public setAudioPlayer(player:any):void {
