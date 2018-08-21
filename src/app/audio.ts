@@ -26,6 +26,11 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
     category: AudioCategory.TVShows,
     source: 'TimAllenAeuhhh.mp3',
     icon: 'TimTaylor_24x24.png'
+  }, {
+    label: 'A.D.T.',
+    category: AudioCategory.Uncategorized,
+    source: 'ADT.mp3',
+    icon: 'ADT_29x26.png'
   },
 
   /* B */
@@ -190,11 +195,6 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
     category: AudioCategory.Uncategorized,
     source: 'Gorilla.mp3',
   }, {
-    label: 'Graduated',
-    category: AudioCategory.Animation,
-    source: 'Graduated.mp3',
-    icon: 'HeatherFleischmann2_24x42.png'
-  }, {
     label: 'Gunfire',
     category: AudioCategory.Uncategorized,
     source: 'Gunfire.mp3',
@@ -242,6 +242,11 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
     category: AudioCategory.MyLittlePony,
     source: 'IDidIt.mp3',
     icon: 'PinkiePie_34x24.png'
+  }, {
+    label: 'I Graduated',
+    category: AudioCategory.Heather,
+    source: 'Graduated.mp3',
+    icon: 'HeatherFleischmann2_24x42.png'
   }, {
     label: 'I Have Businesses',
     category: AudioCategory.Heather,

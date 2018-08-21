@@ -18,17 +18,19 @@ export class SoundService {
   private player: any;
   private audioFiles:AudioItem[] = [];
 
+  audioItemStarted:EventEmitter<AudioEvent> = new EventEmitter();
+  audioItemEnded:EventEmitter<AudioEvent> = new EventEmitter();
   audioStarted:EventEmitter<AudioEvent> = new EventEmitter();
-  audioEnded:EventEmitter<AudioEvent> = new EventEmitter();
+  audioComplete:EventEmitter<AudioEvent> = new EventEmitter();
 
   private audioEndedCallback:any = {
     handleEvent: function(event) {
       //console.log("[SoundService Callback] Audio ended", event);
       if (this.emitter) {
-        this.emitter.emit({ type: 'ended' });  
+        this.emitter.emit({ type: 'itemended' });  
       }
     },
-    emitter: this.audioEnded
+    emitter: this.audioItemEnded
   };
 
   constructor() {
@@ -39,11 +41,31 @@ export class SoundService {
     });
   }
 
-  public audioEntries(category:AudioCategory):AudioEntry[] {
+  public audioEntriesByCategory(category:AudioCategory): AudioEntry[] {
     let entries:AudioEntry[] = [];
 
     entries = AUDIO_ENTRIES.filter(entry => {
       return entry.category === category;
+    });
+
+    return entries;
+  }
+
+  public audioEntriesByLabel(label:string): AudioEntry[] {
+    let entries:AudioEntry[] = [];
+
+    entries = AUDIO_ENTRIES.filter(entry => {
+      return entry.label === label;
+    });
+
+    return entries;
+  }
+
+  public audioEntriesBySource(source:string): AudioEntry[] {
+    let entries:AudioEntry[] = [];
+
+    entries = AUDIO_ENTRIES.filter(entry => {
+      return entry.source === source;
     });
 
     return entries;
@@ -61,6 +83,8 @@ export class SoundService {
     if (this.audioFiles.length > 0) {
       this.pause();
       this.play();
+    } else {
+      this.audioComplete.emit({ type: 'complete' });
     }
   }
 
@@ -88,7 +112,7 @@ export class SoundService {
       }
 
       this.player.nativeElement.play();
-      this.audioStarted.emit({ type: 'started' });
+      this.audioItemStarted.emit({ type: 'itemstarted' });
     }
   }
 
@@ -103,6 +127,7 @@ export class SoundService {
     if (this.player && (this.player.nativeElement.src != "")) {
       //console.log("Attempting to play: assets/audio/" + file);
       this.audioFiles.push(item);
+      this.audioStarted.emit({type: 'started'});
       this.play();
     }
   }
@@ -117,6 +142,7 @@ export class SoundService {
       }
 
       if (this.audioFiles.length > 0) {
+        this.audioStarted.emit({type: 'started'});
         this.play();
       }
     }
@@ -135,11 +161,12 @@ export class SoundService {
 
     this.player.nativeElement.addEventListener('ended', this.audioEndedCallback, true);
 
-    this.audioStarted.subscribe(event => {
+    this.audioItemStarted.subscribe(event => {
       //console.log('[SoundService] Audio Started Event:', event);
       this.onAudioStarted(event);
     });
-    this.audioEnded.subscribe(event => {
+
+    this.audioItemEnded.subscribe(event => {
       //console.log('[SoundService] Audio Ended Event:', event);
       this.onAudioEnded(event);
     });

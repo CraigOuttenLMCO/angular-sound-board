@@ -80,7 +80,7 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   groupAudio(category:AudioCategory): AudioEntry[] {
-    return this.soundService.audioEntries(category);
+    return this.soundService.audioEntriesByCategory(category);
   }
 
   onAudioStarted(event:any): void {
