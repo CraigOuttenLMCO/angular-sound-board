@@ -86,9 +86,9 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
     source: 'Burn2.mp3',
     icon: 'MichaelKelso_28x28.png'
   }, {
-    label: 'Bye Felicia',
+    label: 'Bye Felisha',
     category: AudioCategory.Uncategorized,
-    source: 'ByeFelicia.mp3',
+    source: 'ByeFelisha.mp3',
     icon: 'ByeFelicia_28x28.png'
   },
   
@@ -152,14 +152,19 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
     source: 'FangirlSquealShort.mp3',
     icon: 'PinkiePie_34x24.png'
   }, {
-    label: 'Fart',
+    label: 'Fart (Reverb)',
     category: AudioCategory.Ready,
-    source: 'Fart.mp3',
+    source: 'FartReverb.mp3',
     icon: 'CraigOutten_28x28.png'
   }, {
     label: 'Fart (Everyday)',
     category: AudioCategory.Ready,
     source: 'EverydayFart.mp3',
+    icon: 'CraigOutten_28x28.png'
+  }, {
+    label: 'Fart (Squish)',
+    category: AudioCategory.Ready,
+    source: 'SquishFart.mp3',
     icon: 'CraigOutten_28x28.png'
   },
   
@@ -450,6 +455,11 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
     source: 'Shh.mp3',
     icon: 'PinkiePie_34x24.png'
   }, {
+    label: 'Shh 2',
+    category: AudioCategory.Ready,
+    source: 'Shh2.mp3',
+    icon: 'Nemo_35x26.png'
+  }, {
     label: 'Shh (Craig)',
     category: AudioCategory.Ready,
     source: 'ShhCraig.mp3',
@@ -470,20 +480,25 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
     source: 'ShhLittleStory.mp3',
     icon: 'DrEvil_28x28.png'
   }, {
+    label: 'Shh (Not Helping)',
+    category: AudioCategory.Ready,
+    source: 'ShhNotHelping.mp3',
+    icon: 'PinkiePie_34x24.png'
+  }, {
     label: 'Shh (Short)',
     category: AudioCategory.Ready,
     source: 'ShhShort.mp3',
     icon: 'CraigOutten_28x28.png'
   }, {
+    label: 'Shh (Swimming)',
+    category: AudioCategory.Ready,
+    source: 'ShhSwimming.mp3',
+    icon: 'Nemo_35x26.png'
+  }, {
     label: 'Shh (Whole Bag)',
     category: AudioCategory.Ready,
     source: 'ShhWholeBag.mp3',
     icon: 'DrEvil_28x28.png'
-  }, {
-    label: 'Shh (Not Helping)',
-    category: AudioCategory.Ready,
-    source: 'ShhNotHelping.mp3',
-    icon: 'PinkiePie_34x24.png'
   }, {
     label: 'Slide Whistle',
     category: AudioCategory.Ready,
