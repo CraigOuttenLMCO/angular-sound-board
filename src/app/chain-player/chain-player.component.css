@@ -1,0 +1,35 @@
+mat-card.mat-card {
+    margin-bottom: 16px;
+}
+
+mat-card-content > mat-form-field {
+    margin-top: 10px;
+}
+
+mat-card-title > span {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+mat-card-content mat-button {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+mat-card-content mat-chip {
+    margin-right: 10px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.mat-option-img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+mat-card-title > mat-icon {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 8px;
+}

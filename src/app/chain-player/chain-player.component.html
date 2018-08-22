@@ -1,0 +1,85 @@
+<audio #audioplayer
+  [src]="source"
+  [autoplay]="autoplay"
+  [controls]="controls"
+  [volume]="volume"
+  [loop]="loop"
+  [preload]="preload"
+  [muted]="muted"
+  >
+</audio>
+
+<div>
+  <mat-card>
+    <mat-card-title>
+      <mat-icon>queue_music</mat-icon>
+      <span>Custom Audio Chains</span>
+    </mat-card-title>
+
+    <mat-card-content>
+        <mat-divider class="mat-elevation-z2"></mat-divider>
+        <mat-form-field>
+          <mat-chip-list #chipList>
+            <mat-chip
+              *ngFor="let audio of audios"
+              [selectable]="selectable"
+              [removable]="removable"
+              (removed)="removeChip(audio)">
+              {{audio.label}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input
+              placeholder="New audio chain..."
+              #audioInput
+              [formControl]="audioCtrl"
+              [matAutocomplete]="autoGroup"
+              [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+              [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="addChip($event)">
+          </mat-chip-list>
+          <mat-autocomplete #autoGroup="matAutocomplete" (optionSelected)="onSelectedChip($event)">
+            <mat-option *ngFor="let audio of filteredAudios | async" [value]="audio.source">
+              <img *ngIf="audio.source" class="mat-option-img" aria-hidden [src]="getIconSource(audio)" height="26">
+              <span>{{audio.label}}</span>
+            </mat-option>
+          </mat-autocomplete>
+
+          <button matSuffix type="button" (click)="openPanel()" mat-icon-button style="margin-left: 40px;">
+            <mat-icon>add</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <button type="button" (click)="addChain()" mat-icon-button *ngIf="audios.length > 0">
+          <mat-icon>playlist_add</mat-icon>
+        </button>
+        
+        <mat-divider></mat-divider>
+
+        <p *ngFor="let chain of this.customAudioChains; let i = index">
+          <span style="padding-right: 10px;">{{i+1}}.</span>
+          <mat-chip
+            *ngFor="let audio of chain"
+            [selectable]="false"
+            [removable]="false"
+            [disabled]="true">
+            {{audio.label}}
+          </mat-chip>
+          <button type="button" (click)="playAudioChain(i)" mat-icon-button>
+            <mat-icon>play_arrow</mat-icon>
+          </button>
+          <button type="button" (click)="stopAudioChain(i)" mat-icon-button>
+            <mat-icon>stop</mat-icon>
+          </button>
+          <!-- TODO 
+          <button type="button" (click)="editAudioChain(i)" mat-icon-button>
+            <mat-icon>edit</mat-icon>
+          </button>
+          -->
+          <button type="button" (click)="removeAudioChain(i)" mat-icon-button>
+            <mat-icon>clear</mat-icon>
+          </button>
+        </p>
+    </mat-card-content>
+  </mat-card>
+</div>

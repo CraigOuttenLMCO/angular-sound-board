@@ -1,5 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { AUDIO_ENTRIES, AudioEntry, AudioCategory } from './audio';
+import { Subscription } from 'packages/angular-sound-board-0.0.3-win32-ia32/resources/app/node_modules/rxjs';
 
 export interface AudioEvent /*extends Event*/ {
   type: string;
@@ -22,6 +23,9 @@ export class SoundService {
   audioItemEnded:EventEmitter<AudioEvent> = new EventEmitter();
   audioStarted:EventEmitter<AudioEvent> = new EventEmitter();
   audioComplete:EventEmitter<AudioEvent> = new EventEmitter();
+  // Subscriptions
+  audioItemStartedSubscription: Subscription;
+  audioItemEndedSubscription: Subscription;
 
   private audioEndedCallback:any = {
     handleEvent: function(event) {
@@ -151,6 +155,14 @@ export class SoundService {
   public removeAudioPlayer(player:any):void {
     //console.log('[SoundService:removeAudioPlayer]', this);
 
+    if (this.audioItemStartedSubscription) {
+      this.audioItemStartedSubscription.unsubscribe();
+    }
+
+    if (this.audioItemEndedSubscription) {
+      this.audioItemEndedSubscription.unsubscribe();
+    }
+
     this.player.nativeElement.removeEventListener('ended', this.audioEndedCallback, true);
     this.player = undefined;
   }
@@ -161,12 +173,12 @@ export class SoundService {
 
     this.player.nativeElement.addEventListener('ended', this.audioEndedCallback, true);
 
-    this.audioItemStarted.subscribe(event => {
+    this.audioItemStartedSubscription = this.audioItemStarted.subscribe(event => {
       //console.log('[SoundService] Audio Started Event:', event);
       this.onAudioStarted(event);
     });
 
-    this.audioItemEnded.subscribe(event => {
+   this.audioItemEndedSubscription =  this.audioItemEnded.subscribe(event => {
       //console.log('[SoundService] Audio Ended Event:', event);
       this.onAudioEnded(event);
     });

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PlayerComponent } from './player/player.component';
 import { TabbedPlayerComponent } from './tabbed-player/tabbed-player.component';
+import { ChainPlayerComponent } from './chain-player/chain-player.component';
 
 const routes: Routes = [
   {
@@ -12,8 +13,11 @@ const routes: Routes = [
     path: 'tabbedboard',
     component: TabbedPlayerComponent
   }, {
+    path: 'chain',
+    component: ChainPlayerComponent
+  }, {
     path: '',
-    redirectTo: 'legacyboard',
+    redirectTo: 'tabbedboard',
     pathMatch: 'full'
   }
 ];

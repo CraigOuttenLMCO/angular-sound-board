@@ -6,21 +6,26 @@ import { PlayerComponent } from './player/player.component';
 
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { TabbedPlayerComponent } from './tabbed-player/tabbed-player.component';
 import { SoundService } from './sound.service';
+import { ChainPlayerComponent } from './chain-player/chain-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayerComponent,
-    TabbedPlayerComponent
+    TabbedPlayerComponent,
+    ChainPlayerComponent
   ],
   imports: [
     BrowserModule,
-    MaterialModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
     HttpClientModule,
     AppRoutingModule
   ],
