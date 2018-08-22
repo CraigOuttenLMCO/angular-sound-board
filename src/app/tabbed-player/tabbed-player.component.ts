@@ -24,10 +24,10 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() poopButton: boolean = false;
   
   /** Array of audio tracks.*/
-  @Input() src: Array<string> = [];
+  @Input() src: string = "";
   /** Display or not the controls, default: true */
   @Input() controls: boolean = false;
-  /** Set autoplay status, default true. */
+  /** Set autoplay status, default false. */
   @Input() autoplay: boolean = false;
   /** Set loop status, default false. */
   @Input() loop: boolean = false;
@@ -62,7 +62,8 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.player.nativeElement.src = "";
+    // Provide empty MP3 file to prevent error "HTTP load failed with status 404. Load of media resource http://localhost:4200/null failed."
+    this.player.nativeElement.src = "assets/audio/_.mp3";
     this.soundService.setAudioPlayer(this.player);
 
     // working --v

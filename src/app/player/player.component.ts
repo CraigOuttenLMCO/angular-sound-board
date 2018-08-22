@@ -20,7 +20,7 @@ export class PlayerComponent implements OnInit, AfterViewInit {
   @Input() poopButton: boolean = false;
   
   /** Array of audio tracks.*/
-  @Input() src: Array<string> = [];
+  @Input() src: string = "";
   /** Display or not the controls, default: true */
   @Input() controls: boolean = false;
   /** Set autoplay status, default true. */
@@ -57,8 +57,8 @@ export class PlayerComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // XXX Testing
-    this.player.nativeElement.src = "";
+    // Provide empty MP3 file to prevent error "HTTP load failed with status 404. Load of media resource http://localhost:4200/null failed."
+    this.player.nativeElement.src = "assets/audio/_.mp3";
   }
 
   /** Set programmatically audio controls. */
