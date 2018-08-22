@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { AUDIO_ENTRIES, AudioEntry, AudioCategory } from './audio';
-import { Subscription } from 'packages/angular-sound-board-0.0.3-win32-ia32/resources/app/node_modules/rxjs';
+import { Subscription } from 'rxjs/Subscription';
 
 export interface AudioEvent /*extends Event*/ {
   type: string;
