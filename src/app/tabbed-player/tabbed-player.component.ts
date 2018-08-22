@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, HostListener, ElementRef } from '@angular/core';
 import { Input, Output, ViewChild, EventEmitter } from '@angular/core';
 
 import { AUDIO_GROUPS, AudioGroup } from './audio';
@@ -51,7 +51,7 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   //@Output() audioStarted:EventEmitter<any> = new EventEmitter();
   //@Output() audioEnded:EventEmitter<any> = new EventEmitter();
 
-  @ViewChild('audioplayer') player: any;
+  @ViewChild('audioplayer') player: ElementRef;
 
   constructor(private soundService:SoundService) {
     this.readyAudioEntries = this.groupAudio(AudioCategory.Ready);
