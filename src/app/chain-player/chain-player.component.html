@@ -21,7 +21,7 @@
         <mat-form-field>
           <mat-chip-list #chipList>
             <mat-chip
-              *ngFor="let audio of audios"
+              *ngFor="let audio of audioChips"
               [selectable]="selectable"
               [removable]="removable"
               (removed)="removeChip(audio)">
@@ -41,7 +41,8 @@
           <mat-autocomplete #autoGroup="matAutocomplete" (optionSelected)="onSelectedChip($event)">
             <mat-option *ngFor="let audio of filteredAudios | async" [value]="audio.source">
               <img *ngIf="audio.source" class="mat-option-img" aria-hidden [src]="getIconSource(audio)" height="26">
-              <span>{{audio.label}}</span>
+              <span>{{audio.label}} </span>
+              <small>({{audio.category}})</small>
             </mat-option>
           </mat-autocomplete>
 
@@ -50,7 +51,11 @@
           </button>
         </mat-form-field>
 
-        <button type="button" (click)="addChain()" mat-icon-button *ngIf="audios.length > 0">
+        <button type="button" (click)="playAudioChips()" mat-icon-button *ngIf="audioChips.length > 0">
+          <mat-icon>play_arrow</mat-icon>
+        </button>
+
+        <button type="button" (click)="addChain()" mat-icon-button *ngIf="audioChips.length > 0">
           <mat-icon>playlist_add</mat-icon>
         </button>
         

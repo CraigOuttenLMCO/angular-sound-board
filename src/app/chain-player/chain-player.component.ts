@@ -35,7 +35,7 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   separatorKeysCodes: number[] = [ENTER, COMMA];
   audioCtrl = new FormControl();
   filteredAudios: Observable<AudioEntry[]>;
-  audios: AudioEntry[] = [];
+  audioChips: AudioEntry[] = [];
   allAudios: AudioEntry[] = AUDIO_ENTRIES;
   customAudioChains: Array<Array<AudioEntry>> = new Array<Array<AudioEntry>>();
 
@@ -95,7 +95,7 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
 
   addChain(): void {
     // Clear the audio input field
-    let items:AudioEntry[] = this.audios.splice(0, this.audios.length);
+    let items:AudioEntry[] = this.audioChips.splice(0, this.audioChips.length);
     this.customAudioChains.push(items);
 
     this.saveAudioChains();
@@ -112,7 +112,7 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
       });
 
       if (found) {
-        this.audios.push(found);
+        this.audioChips.push(found);
       }
     }
 
@@ -171,7 +171,7 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
       });
 
       if (found) {
-        this.audios.push(found);
+        this.audioChips.push(found);
       }
     }
     
@@ -181,6 +181,25 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
 
   openPanel(): void {
     this.audioInputTrigger.openPanel();
+  }
+
+  /**
+   * Play the audio chips
+   * @param index 
+   */
+  playAudioChips(): void {
+    if (this.audioChips.length > 0) {
+      const entries: AudioItem[] = this.audioChips.map(entry => {
+        return {
+          source: `assets/audio/${entry.source}`,
+          volume: 1.0
+        };
+      });
+
+      if (entries && (entries.length > 0)) {
+        this.soundService.playAudioMultiple(entries);
+      }
+    }
   }
 
   playAudioChain(index:number): void {
@@ -211,10 +230,10 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   removeChip(audio: AudioEntry): void {
-    const index = this.audios.indexOf(audio);
+    const index = this.audioChips.indexOf(audio);
 
     if (index >= 0) {
-      this.audios.splice(index, 1);
+      this.audioChips.splice(index, 1);
     }
   }
 

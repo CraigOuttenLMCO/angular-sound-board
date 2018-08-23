@@ -23,6 +23,12 @@ mat-card-content mat-chip {
     vertical-align: middle;
 }
 
+mat-form-field {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
 .mat-option-img {
     vertical-align: middle;
     margin-right: 8px;

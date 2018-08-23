@@ -1,3 +1,7 @@
+/*
+	Sources:
+	http://www.pacdv.com/sounds/voices-1.html
+*/
 
 export enum AudioCategory {
   Animation = "Animation",
@@ -26,11 +30,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	{
 		label: 'A Lot Of Thinking',
 		category: AudioCategory.Voices,
-		source: 'IveBeenDoing.wav'
+		source: 'IveBeenDoing.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Aaaah',
 		category: AudioCategory.Voices,
-		source: 'Aaaah.wav'
+		source: 'Aaaah.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Act Like That',
 		category: AudioCategory.LooneyTunes,
@@ -59,7 +65,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Am I Totally Screwed?',
 		category: AudioCategory.Voices,
-		source: 'TotallyScrewed.wav'
+		source: 'TotallyScrewed.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'As Times Goes By',
 		category: AudioCategory.LooneyTunes,
@@ -107,7 +114,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Blah Blah Blah',
 		category: AudioCategory.Voices,
-		source: 'BlahBlahBlah.wav'
+		source: 'BlahBlahBlah.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Blast Your Head Off',
 		category: AudioCategory.LooneyTunes,
@@ -161,19 +169,23 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Bye',
 		category: AudioCategory.Voices,
-		source: 'Bye.wav'
+		source: 'Bye.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Bye Bye 1',
 		category: AudioCategory.Voices,
-		source: 'ByeBye2.wav'
+		source: 'ByeBye2.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Bye Bye 2',
 		category: AudioCategory.Voices,
-		source: 'ByeBye4.wav'
+		source: 'ByeBye4.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Bye Bye 3',
 		category: AudioCategory.Voices,
-		source: 'ByeBye5.wav'
+		source: 'ByeBye5.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Bye Felisha',
 		category: AudioCategory.Uncategorized,
@@ -196,7 +208,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Come On',
 		category: AudioCategory.Voices,
-		source: 'ComeOn1.wav'
+		source: 'ComeOn1.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Communication',
 		category: AudioCategory.Heather,
@@ -224,7 +237,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	{
 		label: 'Discuss Behavior',
 		category: AudioCategory.Voices,
-		source: 'IWannaDiscuss.wav'
+		source: 'IWannaDiscuss.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Dixie Horn',
 		category: AudioCategory.Uncategorized,
@@ -274,11 +288,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Focus',
 		category: AudioCategory.Voices,
-		source: 'Focus.wav'
+		source: 'Focus.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Friday Rocks',
 		category: AudioCategory.Voices,
-		source: 'FridayRocks.wav'
+		source: 'FridayRocks.mp3',
+		icon: 'Voices_36x26.png'
 	},
 	
 	/* G */
@@ -301,7 +317,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Get Away From Me',
 		category: AudioCategory.Voices,
-		source: 'GetAwayFromMe.mp3'
+		source: 'GetAwayFromMe.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Git Along Little Dogie',
 		category: AudioCategory.LooneyTunes,
@@ -363,11 +380,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Hello 1',
 		category: AudioCategory.Voices,
-		source: 'Hello2.mp3'
+		source: 'Hello2.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Hello 2',
 		category: AudioCategory.Voices,
-		source: 'Hello3.mp3'
+		source: 'Hello3.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'He\'s A Big One',
 		category: AudioCategory.LooneyTunes,
@@ -376,27 +395,33 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Hey',
 		category: AudioCategory.Voices,
-		source: 'Hey.mp3'
+		source: 'Hey.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Hey Sweetness 1',
 		category: AudioCategory.Voices,
-		source: 'HeySweetness1.wav'
+		source: 'HeySweetness1.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Hey Sweetness 2',
 		category: AudioCategory.Voices,
-		source: 'HeySweetness2.wav'
+		source: 'HeySweetness2.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Hi 1',
 		category: AudioCategory.Voices,
-		source: 'Hi1.wav'
+		source: 'Hi1.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Hi 2',
 		category: AudioCategory.Voices,
-		source: 'Hi2.wav'
+		source: 'Hi2.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Hi 3',
 		category: AudioCategory.Voices,
-		source: 'Hi3.wav'
+		source: 'Hi3.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Hi Ho Neighbor',
 		category: AudioCategory.TVShows,
@@ -425,15 +450,18 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Hot Stuff',
 		category: AudioCategory.Voices,
-		source: 'HotStuffComingUp.wav'
+		source: 'HotStuffComingUp.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'How Dare You',
 		category: AudioCategory.Voices,
-		source: 'HowDareYou.wav'
+		source: 'HowDareYou.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Huh',
 		category: AudioCategory.Voices,
-		source: 'Huh2.wav'
+		source: 'Huh2.mp3',
+		icon: 'Voices_36x26.png'
 	},
 	
 	/* I */
@@ -451,11 +479,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'I Can\'t',
 		category: AudioCategory.Voices,
-		source: 'ImSorryICant.wav'
+		source: 'ImSorryICant.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'I Can\'t Take This',
 		category: AudioCategory.Voices,
-		source: 'ICantTakeThis.mp3'
+		source: 'ICantTakeThis.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'I Did It',
 		category: AudioCategory.MyLittlePony,
@@ -464,11 +494,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'I Don\'t Think So',
 		category: AudioCategory.Voices,
-		source: 'IDontThinkSo2.wav'
+		source: 'IDontThinkSo2.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'I Don\'t Understand',
 		category: AudioCategory.Voices,
-		source: 'IDontUnderstand.wav'
+		source: 'IDontUnderstand.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'I Graduated',
 		category: AudioCategory.Heather,
@@ -512,7 +544,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'I\'ll Keep Calling',
 		category: AudioCategory.Voices,
-		source: 'IllKeepCalling1.wav'
+		source: 'IllKeepCalling1.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'I\'m Going To Tell',
 		category: AudioCategory.LooneyTunes,
@@ -521,7 +554,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'I\'m Gonna Go',
 		category: AudioCategory.Voices,
-		source: 'ImGonnaGo.wav'
+		source: 'ImGonnaGo.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'I\'m Not Selling It',
 		category: AudioCategory.Uncategorized,
@@ -535,19 +569,23 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'I\'m So Hungry',
 		category: AudioCategory.Voices,
-		source: 'ImSoHungry.wav'
+		source: 'ImSoHungry.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'I\'m So Ready',
 		category: AudioCategory.Voices,
-		source: 'ImSoReady.wav'
+		source: 'ImSoReady.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'I\'m Sorry',
 		category: AudioCategory.Voices,
-		source: 'ImSorry.wav'
+		source: 'ImSorry.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'I\'m The Man',
 		category: AudioCategory.Voices,
-		source: 'ImTheMan.wav'
+		source: 'ImTheMan.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Imbesile',
 		category: AudioCategory.LooneyTunes,
@@ -571,19 +609,23 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'It\'s Almost Time',
 		category: AudioCategory.Voices,
-		source: 'ItsAlmostTime.wav'
+		source: 'ItsAlmostTime.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'It\'s Me',
 		category: AudioCategory.Voices,
-		source: 'ItsMe.wav'
+		source: 'ItsMe.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'It\'s Me Again',
 		category: AudioCategory.Voices,
-		source: 'ItsMeAgain.wav'
+		source: 'ItsMeAgain.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'It\'s Not That Easy',
 		category: AudioCategory.Voices,
-		source: 'ItsNotThatEasy.wav'
+		source: 'ItsNotThatEasy.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'It\'s So Fluffy',
 		category: AudioCategory.Animation,
@@ -592,11 +634,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'It\'s You',
 		category: AudioCategory.Voices,
-		source: 'ItsYou.wav'
+		source: 'ItsYou.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'It\'s Your Sweetheart',
 		category: AudioCategory.Voices,
-		source: 'ItsYourSweetheartAgain.wav'
+		source: 'ItsYourSweetheartAgain.mp3',
+		icon: 'Voices_36x26.png'
 	},
 	
 	/* J */
@@ -614,7 +658,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Just About Done',
 		category: AudioCategory.Voices,
-		source: 'JustAboutDoneHoney.wav'
+		source: 'JustAboutDoneHoney.mp3',
+		icon: 'Voices_36x26.png'
 	},
 	
 	/* K */
@@ -636,7 +681,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Let Me Out Of Here',
 		category: AudioCategory.Voices,
-		source: 'LetMeOutOfHere1.wav'
+		source: 'LetMeOutOfHere1.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Life Of The Party',
 		category: AudioCategory.LooneyTunes,
@@ -674,7 +720,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Maybe Next Time',
 		category: AudioCategory.Voices,
-		source: 'MaybeNextTimeHuh.wav'
+		source: 'MaybeNextTimeHuh.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Meatloaf',
 		category: AudioCategory.TVShows,
@@ -683,7 +730,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Mmm',
 		category: AudioCategory.Voices,
-		source: 'Mmm1.wav'
+		source: 'Mmm1.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'More Confusion',
 		category: AudioCategory.LooneyTunes,
@@ -721,11 +769,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Nice Work',
 		category: AudioCategory.Voices,
-		source: 'NiceWork.wav'
+		source: 'NiceWork.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'No',
 		category: AudioCategory.Voices,
-		source: 'No4.wav'
+		source: 'No4.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'No Get Up And Go',
 		category: AudioCategory.LooneyTunes,
@@ -915,7 +965,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Smells Really Good',
 		category: AudioCategory.Voices,
-		source: 'ItSmellsReallyGood.mp3'
+		source: 'ItSmellsReallyGood.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Snoring',
 		category: AudioCategory.Uncategorized,
@@ -963,15 +1014,18 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'Talk Me Into This',
 		category: AudioCategory.Voices,
-		source: 'ICantBelieveILetYou.wav'
+		source: 'ICantBelieveILetYou.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Telling Me Something',
 		category: AudioCategory.Voices,
-		source: 'IThinkThatThisIs.wav'
+		source: 'IThinkThatThisIs.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'Thank God It\'s Friday',
 		category: AudioCategory.Voices,
-		source: 'ThankGodItsFriday.mp3'
+		source: 'ThankGodItsFriday.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'That Was A Joke Girl',
 		category: AudioCategory.LooneyTunes,
@@ -1056,7 +1110,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		label: 'What I Think',
 		category: AudioCategory.Voices,
-		source: 'IllTellYouWhatIThink.wav'
+		source: 'IllTellYouWhatIThink.mp3',
+		icon: 'Voices_36x26.png'
 	}, {
 		label: 'What\'s Goin\' On Here',
 		category: AudioCategory.LooneyTunes,
