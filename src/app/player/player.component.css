@@ -22,3 +22,19 @@ mat-card-title > span {
     vertical-align: middle;
     margin-right: 10px;
 }
+
+mat-card-title > mat-icon {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.divider-gap1 {
+    margin-top: 16px;
+}
+
+mat-card-content img {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: 10px;
+}

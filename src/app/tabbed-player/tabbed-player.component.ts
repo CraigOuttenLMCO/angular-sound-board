@@ -21,9 +21,8 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() pauseButton: boolean = true;
   @Input() selectableButton: boolean = false;
   @Input() muteButton: boolean = false;
-  @Input() poopButton: boolean = false;
   
-  /** Array of audio tracks.*/
+  /** Audio track source. */
   @Input() src: string = "";
   /** Display or not the controls, default: true */
   @Input() controls: boolean = false;
@@ -48,9 +47,6 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   /** Define the mute status, default false. */
   @Input() muted: boolean = false;
 
-  //@Output() audioStarted:EventEmitter<any> = new EventEmitter();
-  //@Output() audioEnded:EventEmitter<any> = new EventEmitter();
-
   @ViewChild('audioplayer') player: ElementRef;
 
   constructor(private soundService:SoundService) {
@@ -65,47 +61,14 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
     // Provide empty MP3 file to prevent error "HTTP load failed with status 404. Load of media resource http://localhost:4200/null failed."
     this.player.nativeElement.src = "assets/audio/_.mp3";
     this.soundService.setAudioPlayer(this.player);
-
-    // working --v
-    //this.player.nativeElement.onended = function(event) {
-    //  console.log(event);
-    //  this.audioEndedEmitter.emit(event);
-    //};
-    // working --> this.player.nativeElement.addEventListener('ended', this.audioEndedCallback, true);
   }
 
   ngOnDestroy() {
-    //this.player.nativeElement.removeEventListener('ended', this.onAudioEnded, false);
-    // working --> this.player.nativeElement.removeEventListener('ended', this.audioEndedCallback, true);
     this.soundService.removeAudioPlayer(this.player);
   }
 
   groupAudio(category:AudioCategory): AudioEntry[] {
     return this.soundService.audioEntriesByCategory(category);
-  }
-
-  onAudioStarted(event:any): void {
-    //console.log("Audio started", event);
-  }
-
-  onAudioEnded(event:any): void {
-    //console.log("Audio ended", event);
-  }
-
-  /** Set programmatically audio controls. */
-  private play(file:string, volume:number): void {
-    if (this.player.nativeElement.src != file) {
-      this.player.nativeElement.src = file;
-    }
-
-    if (this.player.nativeElement.volume != volume) {
-      this.player.nativeElement.volume = volume;
-    }
-
-    this.player.nativeElement.play();
-
-    // Testing
-    // working --> this.audioStarted.emit('playing');
   }
 
   playAudio(file:string): void {

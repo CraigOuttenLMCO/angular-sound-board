@@ -10,77 +10,48 @@
       >
   </audio>
 
-
-
-<!--
+  <!-- Ready Queue Sounds -->
   <mat-card>
-      <mat-card-title>Demo Sounds</mat-card-title>
-      <mat-card-content>
-        <button type="button" (click)="playAudio('song1.mp3')" *ngIf="playButton" mat-raised-button color="primary">Song 1</button>
-        <button type="button" (click)="playAudio('song2.mp3')" *ngIf="playButton" mat-raised-button color="primary">Song 2</button>
-        <button type="button" (click)="pause()" *ngIf="pauseButton" mat-raised-button color="primary">Stop</button>
-        <button type="button" (click)="mute()" *ngIf="muteButton" mat-raised-button color="primary">Mute</button>
-      -->
-        <!--
-        <button type="button" (click)="previousTrack()" *ngIf="selectableButton">Previous</button>
-        <button type="button" (click)="nextTrack()" *ngIf="selectableButton">Next</button>
-        -->
-        <!--
-        <button mat-button>All</button>
-        <button mat-raised-button>Of</button>
-        <button mat-raised-button color="primary">The</button>
-        <button mat-raised-button color="accent">Buttons</button>
-        -->
-        <!--
-      </mat-card-content>
-  </mat-card>
--->
-
-<!--
-  <mat-card>
-      <mat-card-title>Office Sounds</mat-card-title>
-      <mat-card-content>
-      -->
-        <!--
-        <button type="button" (click)="playAudio('BlessYou.mp3')" *ngIf="playButton" mat-raised-button color="primary">Bless You</button>
-        <button type="button" (click)="playAudio('BottomsUp.mp3')" *ngIf="playButton" mat-raised-button color="primary">Bottoms Up</button>
-        <button type="button" (click)="playAudio('ByeFelicia.mp3')" *ngIf="playButton" mat-raised-button color="primary">Bye Felicia</button>
-
-        <button type="button" (click)="playAudio('Crickets.wav')" *ngIf="playButton" mat-raised-button color="primary">Crickets</button>
-
-        <button type="button" (click)="playAudio('Drama.mp3')" *ngIf="playButton" mat-raised-button color="primary">Drama</button>
-        -->
-        <!--
-        <div *ngFor="let item of audioEntries.groups[1]">
-        <button 
-          (click)="playAudio('{{item.src}}')" *ngIf="playButton" mat-raised-button color="{{item.color}}">{{item.label}}</button>
-        </div>
-        -->
-        <!--
-      </mat-card-content>
-  </mat-card>
--->
-
-  <mat-card *ngFor="let group of this.audioEntries">
     <mat-card-title>
-      <span>{{group.name}}</span>
-        <button type="button" (click)="pause()" class="mat-small" *ngIf="pauseButton" mat-button color="secondary">
-            <mat-icon svgIcon="stop-button"></mat-icon>
-        </button>
-        <button type="button" (click)="playAudio('Fart.mp3')" class="mat-small" *ngIf="poopButton" mat-button color="secondary">
-          <mat-icon svgIcon="poo-pile"></mat-icon>
+      <span class="mat-inline">Ready Queue</span>
+        <button type="button" (click)="pause()" *ngIf="pauseButton" mat-icon-button>
+            <mat-icon>stop_circle_outline</mat-icon>
         </button>
     </mat-card-title>
     <mat-card-content>
         <mat-divider></mat-divider>
-        <span *ngFor="let audio of group.audio">
+        <span *ngFor="let audio of this.readyAudioEntries">
         <button
-          (click)="playAudio(audio.src)"
+          (click)="playAudio(audio.source)"
           *ngIf="playButton"
           mat-raised-button
-          color="{{audio.color}}">
-          <img *ngIf="audio.pngicon" src="assets/images/{{audio.pngicon}}">{{audio.label}}</button>
-          <span *ngIf="audio.divider === true"><br/><mat-divider></mat-divider></span>
+          color="{{audio.color ? audio.color : 'primary'}}">
+          <img *ngIf="audio.icon" src="assets/images/{{audio.icon}}">{{audio.label}}</button>
         </span>
+    </mat-card-content>
+  </mat-card>
+  
+  <mat-card>
+    <mat-card-title>
+      <span>Sounds</span>
+        <button type="button" (click)="pause()" *ngIf="pauseButton" mat-icon-button>
+            <mat-icon>stop</mat-icon>
+        </button>
+    </mat-card-title>
+    <mat-card-content>
+        <div *ngFor="let group of audioGroups">
+          <br/>
+          <mat-divider class="mat-elevation-z1"></mat-divider>
+          <div class="divider-gap1"><img *ngIf="group.icon" src="assets/images/{{group.icon}}">{{group.category}}</div>
+          <br/>
+          <span *ngFor="let audio of groupAudio(group.category)">
+            <button
+              (click)="playAudio(audio.source)"
+              *ngIf="playButton"
+              mat-raised-button
+              color="{{audio.color ? audio.color : 'primary'}}">
+            <img *ngIf="audio.icon" src="assets/images/{{audio.icon}}">{{audio.label}}</button>
+          </span>
+        </div>
     </mat-card-content>
   </mat-card>

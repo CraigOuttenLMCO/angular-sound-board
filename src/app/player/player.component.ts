@@ -1,25 +1,28 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, OnDestroy } from '@angular/core';
 import { Input, Output, ViewChild } from '@angular/core';
 
-import { AUDIO_ENTRIES } from './audio';
+import { AUDIO_GROUPS, AudioGroup } from './audio';
+import { SoundService, AudioItem } from '../sound.service';
+import { AudioEntry, AudioCategory } from '../audio';
 
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.css']
 })
-export class PlayerComponent implements OnInit, AfterViewInit {
+export class PlayerComponent implements OnInit, AfterViewInit, OnDestroy {
   source: string;
-  audioEntries: any = AUDIO_ENTRIES;
-  
+  readyAudioEntries:AudioEntry[] = [];
+  //audioEntries: AudioEntry[] = AUDIO_ENTRIES;
+  audioGroups: AudioGroup[] = AUDIO_GROUPS;
+
   /** Buttons */
   @Input() playButton: boolean = true;
   @Input() pauseButton: boolean = true;
   @Input() selectableButton: boolean = false;
   @Input() muteButton: boolean = false;
-  @Input() poopButton: boolean = false;
   
-  /** Array of audio tracks.*/
+  /** Audio track source. */
   @Input() src: string = "";
   /** Display or not the controls, default: true */
   @Input() controls: boolean = false;
@@ -44,13 +47,10 @@ export class PlayerComponent implements OnInit, AfterViewInit {
   /** Define the mute status, default false. */
   @Input() muted: boolean = false;
 
-  @ViewChild('audioplayer') player: any;
+  @ViewChild('audioplayer') player: ElementRef;
 
-  constructor() {
-    /** Init player with the first occurrence of src's array. */
-    //if (this.src.length) {
-    //  this.source = this.src[this.startPosition];
-    //}
+  constructor(private soundService:SoundService) {
+    this.readyAudioEntries = this.groupAudio(AudioCategory.Ready);
   }
 
   ngOnInit() {
@@ -59,34 +59,41 @@ export class PlayerComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     // Provide empty MP3 file to prevent error "HTTP load failed with status 404. Load of media resource http://localhost:4200/null failed."
     this.player.nativeElement.src = "assets/audio/_.mp3";
+    this.soundService.setAudioPlayer(this.player);
   }
 
-  /** Set programmatically audio controls. */
-  private play(file:string, volume:number): void {
-    if (this.player.nativeElement.src != file) {
-      this.player.nativeElement.src = file;
-    }
+  
+  ngOnDestroy() {
+    this.soundService.removeAudioPlayer(this.player);
+  }
 
-    if (this.player.nativeElement.volume != volume) {
-      this.player.nativeElement.volume = volume;
-    }
-
-    this.player.nativeElement.play();
+  groupAudio(category:AudioCategory): AudioEntry[] {
+    return this.soundService.audioEntriesByCategory(category);
   }
 
   playAudio(file:string): void {
-    this.play("assets/audio/" + file, 1.0);
+    let item:AudioItem = {
+      source: "assets/audio/" + file,
+      volume: 1.0
+    };
+
+    this.soundService.playAudio(item);
   }
 
   playAudioLevel(file:string, volume:number): void {
-    this.play("assets/audio/" + file, volume);
+    let item:AudioItem = {
+      source: "assets/audio/" + file,
+      volume: volume
+    };
+
+    this.soundService.playAudio(item);
   }
 
   pause(): void {
-    this.player.nativeElement.pause();
+    this.soundService.pause();
   }
 
   mute(): void {
-    this.player.nativeElement.muted = !this.player.nativeElement.muted;
+    this.soundService.mute();
   }
 }

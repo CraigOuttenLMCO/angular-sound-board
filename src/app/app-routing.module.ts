@@ -7,7 +7,7 @@ import { ChainPlayerComponent } from './chain-player/chain-player.component';
 
 const routes: Routes = [
   {
-    path: 'legacyboard',
+    path: 'playerboard',
     component: PlayerComponent
   }, {
     path: 'tabbedboard',

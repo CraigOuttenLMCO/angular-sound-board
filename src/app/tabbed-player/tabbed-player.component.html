@@ -16,9 +16,6 @@
         <button type="button" (click)="pause()" class="mat-small" *ngIf="pauseButton" mat-icon-button>
             <mat-icon>stop_circle_outline</mat-icon>
         </button>
-        <button type="button" (click)="playAudio('Fart.mp3')" class="mat-small" *ngIf="poopButton" mat-button color="secondary">
-          <mat-icon svgIcon="poo-pile"></mat-icon>
-        </button>
     </mat-card-title>
     <mat-card-content>
         <mat-divider></mat-divider>
@@ -39,9 +36,6 @@
       <span>Office</span>
       <button type="button" (click)="pause()" class="mat-small" *ngIf="pauseButton" mat-icon-button>
         <mat-icon>stop_circle_outline</mat-icon>
-      </button>
-      <button type="button" (click)="playAudio('Fart.mp3')" class="mat-small" *ngIf="poopButton" mat-button color="secondary">
-        <mat-icon svgIcon="poo-pile"></mat-icon>
       </button>
     </mat-card-title>
 
@@ -99,9 +93,6 @@
       <span>{{group.name}}</span>
         <button type="button" (click)="pause()" class="mat-small" *ngIf="pauseButton" mat-button color="secondary">
             <mat-icon svgIcon="stop-button"></mat-icon>
-        </button>
-        <button type="button" (click)="playAudio('Fart.mp3')" class="mat-small" *ngIf="poopButton" mat-button color="secondary">
-          <mat-icon svgIcon="poo-pile"></mat-icon>
         </button>
     </mat-card-title>
     <mat-card-content>
