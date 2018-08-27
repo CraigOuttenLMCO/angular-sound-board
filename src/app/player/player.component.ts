@@ -4,6 +4,7 @@ import { Input, Output, ViewChild } from '@angular/core';
 import { AUDIO_GROUPS, AudioGroup } from './audio';
 import { SoundService, AudioItem } from '../sound.service';
 import { AudioEntry, AudioCategory } from '../audio';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-player',
@@ -16,9 +17,13 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnDestroy {
   //audioEntries: AudioEntry[] = AUDIO_ENTRIES;
   audioGroups: AudioGroup[] = AUDIO_GROUPS;
 
+  audioStartedSubscription: Subscription;
+  audioCompleteSubscription: Subscription;
+  playing: boolean = false;
+
   /** Buttons */
-  @Input() playButton: boolean = true;
-  @Input() pauseButton: boolean = true;
+  @Input() playButton: boolean = false;
+  @Input() stopButton: boolean = true;
   @Input() selectableButton: boolean = false;
   @Input() muteButton: boolean = false;
   
@@ -47,8 +52,6 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnDestroy {
   /** Define the mute status, default false. */
   @Input() muted: boolean = false;
 
-  @ViewChild('audioplayer') player: ElementRef;
-
   constructor(private soundService:SoundService) {
     this.readyAudioEntries = this.groupAudio(AudioCategory.Ready);
   }
@@ -57,14 +60,24 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    // Provide empty MP3 file to prevent error "HTTP load failed with status 404. Load of media resource http://localhost:4200/null failed."
-    this.player.nativeElement.src = "assets/audio/_.mp3";
-    this.soundService.setAudioPlayer(this.player);
+    this.audioStartedSubscription = this.soundService.audioStarted.subscribe(() => {
+      this.playing = true;
+    });
+
+    this.audioCompleteSubscription = this.soundService.audioComplete.subscribe(() => {
+      this.playing = false;
+    });
   }
 
   
   ngOnDestroy() {
-    this.soundService.removeAudioPlayer(this.player);
+    if (this.audioStartedSubscription) {
+      this.audioStartedSubscription.unsubscribe();
+    }
+
+    if (this.audioCompleteSubscription) {
+      this.audioCompleteSubscription.unsubscribe();
+    }
   }
 
   groupAudio(category:AudioCategory): AudioEntry[] {
@@ -89,8 +102,8 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnDestroy {
     this.soundService.playAudio(item);
   }
 
-  pause(): void {
-    this.soundService.pause();
+  stop(): void {
+    this.soundService.stop();
   }
 
   mute(): void {

@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild, OnInit, OnDestroy, AfterViewInit, Inp
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocompleteTrigger } from '@angular/material';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { AUDIO_ENTRIES, AudioEntry } from '../audio';
 import { LocalStorageService } from '../local-storage.service';
@@ -39,9 +39,13 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   allAudios: AudioEntry[] = AUDIO_ENTRIES;
   customAudioChains: Array<Array<AudioEntry>> = new Array<Array<AudioEntry>>();
 
+  audioStartedSubscription: Subscription;
+  audioCompleteSubscription: Subscription;
+  playing: boolean = false;
+  paused: boolean = false;
+
   @ViewChild('audioInput', { read: MatAutocompleteTrigger }) audioInputTrigger: MatAutocompleteTrigger;
   @ViewChild('audioInput') audioInput: ElementRef;
-  @ViewChild('audioplayer') player: ElementRef;
 
   /** Array of audio tracks.*/
   @Input() src: string = "";
@@ -81,19 +85,34 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.player.nativeElement.src = "assets/audio/_.mp3";
-    this.soundService.setAudioPlayer(this.player);
-
     this.loadAudioChains();
+
+    this.audioStartedSubscription = this.soundService.audioStarted.subscribe(() => {
+      this.playing = true;
+    });
+
+    this.audioCompleteSubscription = this.soundService.audioComplete.subscribe(() => {
+      this.playing = false;
+    });
   }
 
   ngOnDestroy() {
-    this.soundService.removeAudioPlayer(this.player);
+    if (this.audioStartedSubscription) {
+      this.audioStartedSubscription.unsubscribe();
+    }
+
+    if (this.audioCompleteSubscription) {
+      this.audioCompleteSubscription.unsubscribe();
+    }
   }
 
   /* Functions */
 
   addChain(): void {
+    if (this.playing) {
+      this.soundService.stop();
+    }
+
     // Clear the audio input field
     let items:AudioEntry[] = this.audioChips.splice(0, this.audioChips.length);
     this.customAudioChains.push(items);
@@ -121,6 +140,16 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
       input.value = '';
     }
 
+    this.audioCtrl.setValue(null);
+  }
+
+  clearChips(): void {
+    if (this.playing) {
+      this.soundService.stop();
+    }
+
+    this.audioChips.length = 0;
+    this.audioInput.nativeElement.value = '';
     this.audioCtrl.setValue(null);
   }
 
@@ -183,6 +212,16 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
     this.audioInputTrigger.openPanel();
   }
 
+  pauseAudioChain(index:number): void {
+    if (!this.soundService.isPaused()) {
+      this.paused = true;
+      this.soundService.pause();
+    } else {
+      this.paused = false;
+      this.soundService.resume();
+    }
+  }
+
   /**
    * Play the audio chips
    * @param index 
@@ -223,10 +262,11 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
 
   removeAudioChain(index:number): void {
     if (index > -1) {
+      this.stopAudioChain(index);
       this.customAudioChains.splice(index, 1);
 
       this.saveAudioChains();
-   }
+    }
   }
 
   removeChip(audio: AudioEntry): void {
@@ -259,6 +299,12 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   stopAudioChain(index:number): void {
-    this.soundService.pause();
+    this.soundService.stop();
+    this.paused = false;
+  }
+
+  stopAudioChips(): void {
+    this.soundService.stop();
+    this.paused = false;
   }
 }

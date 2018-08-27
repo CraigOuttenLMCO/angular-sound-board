@@ -1,20 +1,9 @@
 
-  <audio #audioplayer
-    [src]="source"
-    [autoplay]="autoplay"
-    [controls]="controls"
-    [volume]="volume"
-    [loop]="loop"
-    [preload]="preload"
-    [muted]="muted"
-      >
-  </audio>
-
   <!-- Ready Queue Sounds -->
   <mat-card>
     <mat-card-title>
       <span class="mat-inline">Ready Queue</span>
-        <button type="button" (click)="pause()" *ngIf="pauseButton" mat-icon-button>
+        <button type="button" (click)="stop()" *ngIf="stopButton" [disabled]="!playing" mat-icon-button>
             <mat-icon>stop_circle_outline</mat-icon>
         </button>
     </mat-card-title>
@@ -23,7 +12,6 @@
         <span *ngFor="let audio of this.readyAudioEntries">
         <button
           (click)="playAudio(audio.source)"
-          *ngIf="playButton"
           mat-raised-button
           color="{{audio.color ? audio.color : 'primary'}}">
           <img *ngIf="audio.icon" src="assets/images/{{audio.icon}}">{{audio.label}}</button>
@@ -34,20 +22,21 @@
   <mat-card>
     <mat-card-title>
       <span>Sounds</span>
-        <button type="button" (click)="pause()" *ngIf="pauseButton" mat-icon-button>
-            <mat-icon>stop</mat-icon>
-        </button>
     </mat-card-title>
     <mat-card-content>
         <div *ngFor="let group of audioGroups">
           <br/>
           <mat-divider class="mat-elevation-z1"></mat-divider>
-          <div class="divider-gap1"><img *ngIf="group.icon" src="assets/images/{{group.icon}}">{{group.category}}</div>
+          <div class="divider-gap1"><img *ngIf="group.icon" src="assets/images/{{group.icon}}">
+            {{group.category}}
+            <button type="button" (click)="stop()" *ngIf="stopButton" [disabled]="!playing" mat-icon-button>
+              <mat-icon>stop</mat-icon>
+            </button>
+          </div>
           <br/>
           <span *ngFor="let audio of groupAudio(group.category)">
             <button
               (click)="playAudio(audio.source)"
-              *ngIf="playButton"
               mat-raised-button
               color="{{audio.color ? audio.color : 'primary'}}">
             <img *ngIf="audio.icon" src="assets/images/{{audio.icon}}">{{audio.label}}</button>

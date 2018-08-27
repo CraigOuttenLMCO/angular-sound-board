@@ -1,13 +1,3 @@
-<audio #audioplayer
-  [src]="source"
-  [autoplay]="autoplay"
-  [controls]="controls"
-  [volume]="volume"
-  [loop]="loop"
-  [preload]="preload"
-  [muted]="muted"
-  >
-</audio>
 
 <div>
   <mat-card>
@@ -51,12 +41,22 @@
           </button>
         </mat-form-field>
 
-        <button type="button" (click)="playAudioChips()" mat-icon-button *ngIf="audioChips.length > 0">
+        <button type="button" (click)="stopAudioChips()" mat-icon-button *ngIf="(audioChips.length > 0)" [disabled]="!playing">
+          <mat-icon>stop</mat-icon>
+        </button>
+
+        <button type="button" (click)="playAudioChips()" mat-icon-button *ngIf="(audioChips.length > 0)" [disabled]="playing">
           <mat-icon>play_arrow</mat-icon>
         </button>
 
-        <button type="button" (click)="addChain()" mat-icon-button *ngIf="audioChips.length > 0">
+        <span class="vertical-divider" *ngIf="(audioChips.length > 0)"></span>
+
+        <button type="button" (click)="addChain()" mat-icon-button *ngIf="(audioChips.length > 0)">
           <mat-icon>playlist_add</mat-icon>
+        </button>
+
+        <button type="button" (click)="clearChips()" mat-icon-button *ngIf="(audioChips.length > 0)">
+          <mat-icon>clear</mat-icon>
         </button>
         
         <mat-divider></mat-divider>
@@ -70,10 +70,16 @@
             [disabled]="true">
             {{audio.label}}
           </mat-chip>
-          <button type="button" (click)="playAudioChain(i)" mat-icon-button>
+          <button type="button" (click)="playAudioChain(i)" mat-icon-button [disabled]="playing">
             <mat-icon>play_arrow</mat-icon>
           </button>
-          <button type="button" (click)="stopAudioChain(i)" mat-icon-button>
+
+          <button type="button" (click)="pauseAudioChain(i)" mat-icon-button [disabled]="!playing">
+            <mat-icon *ngIf="!paused">pause</mat-icon>
+            <mat-icon *ngIf="paused">play_circle_outline</mat-icon>
+          </button>
+
+          <button type="button" (click)="stopAudioChain(i)" mat-icon-button [disabled]="!playing">
             <mat-icon>stop</mat-icon>
           </button>
           <!-- TODO 
@@ -81,8 +87,11 @@
             <mat-icon>edit</mat-icon>
           </button>
           -->
+          
+          <span class="vertical-divider"></span>
+
           <button type="button" (click)="removeAudioChain(i)" mat-icon-button>
-            <mat-icon>clear</mat-icon>
+            <mat-icon>delete</mat-icon>
           </button>
         </p>
     </mat-card-content>
