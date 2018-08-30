@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Select Redy Queue Audio Items</h2>
+
+<mat-dialog-content>
+    <mat-selection-list #selections>
+        <mat-list-option [checkboxPosition]="before" [value]="audio" [selected]="audio.selected" *ngFor="let audio of data.audioEntries">
+            <span matLine><img matListIcon *ngIf="audio.icon" src="assets/images/{{audio.icon}}"> {{audio.label}}</span>
+        </mat-list-option>
+    </mat-selection-list>
+</mat-dialog-content>
+<mat-divider></mat-divider>
+<mat-dialog-actions>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <!-- selections.selectedOptions.selected -->
+    <!-- [mat-dialog-close]="onApply()" -->
+    <button mat-raised-button color="primary" (click)="onApply()">Apply</button>
+
+    <!-- mat-dialog-close -->
+    <button mat-raised-button color="primary" (click)="onCancel()">Cancel</button>
+</mat-dialog-actions>

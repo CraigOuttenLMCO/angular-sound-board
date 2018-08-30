@@ -1,35 +1,5 @@
-  <!--
-  <audio #audioplayer
-    [src]="source"
-    [autoplay]="autoplay"
-    [controls]="controls"
-    [volume]="volume"
-    [loop]="loop"
-    [preload]="preload"
-    [muted]="muted"
-    >
-  </audio>
-  -->
-
   <!-- Ready Queue Sounds -->
-  <mat-card>
-    <mat-card-title>
-      <span class="mat-inline">Ready Queue</span>
-        <button type="button" (click)="stop()" class="mat-small" *ngIf="stopButton" [disabled]="!playing" mat-icon-button>
-            <mat-icon>stop</mat-icon>
-        </button>
-    </mat-card-title>
-    <mat-card-content>
-        <mat-divider></mat-divider>
-        <span *ngFor="let audio of this.readyAudioEntries">
-        <button
-          (click)="playAudio(audio.source)"
-          mat-raised-button
-          color="{{audio.color ? audio.color : 'primary'}}">
-          <img *ngIf="audio.icon" src="assets/images/{{audio.icon}}">{{audio.label}}</button>
-        </span>
-    </mat-card-content>
-  </mat-card>
+  <ready-queue></ready-queue>
 
   <!-- Other, Non-Ready Queue Sounds -->
   <mat-card>

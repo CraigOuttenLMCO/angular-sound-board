@@ -12,13 +12,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { TabbedPlayerComponent } from './tabbed-player/tabbed-player.component';
 import { SoundService } from './sound.service';
 import { ChainPlayerComponent } from './chain-player/chain-player.component';
+import { EditReadyQueueComponent } from './edit-ready-queue/edit-ready-queue.component';
+import { ReadyQueueComponent } from './ready-queue/ready-queue.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayerComponent,
     TabbedPlayerComponent,
-    ChainPlayerComponent
+    ChainPlayerComponent,
+    EditReadyQueueComponent,
+    ReadyQueueComponent
+  ],
+  entryComponents: [
+    EditReadyQueueComponent
   ],
   imports: [
     BrowserModule,

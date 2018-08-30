@@ -53,7 +53,7 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() muted: boolean = false;
 
   constructor(private soundService:SoundService) {
-    this.readyAudioEntries = this.groupAudio(AudioCategory.Ready);
+    this.readyAudioEntries = this.soundService.defaultReadyEntries();
   }
 
   ngOnInit() {

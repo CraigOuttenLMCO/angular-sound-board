@@ -1,0 +1,101 @@
+<mat-card>
+  <mat-card-title>
+    <span class="mat-inline">Ready Queue</span>
+    <button type="button" mat-icon-button
+      (click)="stop()"
+      *ngIf="stopButton"
+      matTooltip="Stop"
+      aria-label="Button that stops playing the current entry"
+      [disabled]="!playing">
+      <mat-icon>stop_circle_outline</mat-icon>
+    </button>
+    <button mat-icon-button
+      (click)="editReadyQueue($event)"
+      *ngIf="editable"
+      matTooltip="Edit the Ready Queue"
+      aria-label="Button that edits the ready queue audio entries">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button
+      (click)="restoreReadyQueue($event)"
+      *ngIf="editable"
+      matTooltip="Restore Default Ready Queue"
+      aria-label="Button that restores the ready queue to default audio entries">
+      <mat-icon>settings_backup_restore</mat-icon>
+    </button>
+  </mat-card-title>
+
+  <mat-card-content>
+      <mat-divider></mat-divider>
+      <span *ngFor="let audio of this.audioEntries">
+      <button
+        (click)="playAudio(audio.source)"
+        mat-raised-button
+        color="{{audio.color ? audio.color : 'primary'}}">
+        <img *ngIf="audio.icon" src="assets/images/{{audio.icon}}">{{audio.label}}</button>
+      </span>
+  </mat-card-content>
+</mat-card>
+
+<!--
+<mat-card>
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <span class="mat-inline">Ready Queue</span>
+          <span>
+            <button type="button" (click)="stop()" class="mat-small" *ngIf="stopButton" [disabled]="!playing" mat-icon-button>
+              <mat-icon>stop</mat-icon>
+            </button>
+          </span>
+        </div>
+      </mat-card-title>
+    </mat-card-title-group>
+
+    <div fxFlex></div>
+
+    <div>
+-->
+      <!--  [matMenuTriggerFor]="readyQueueMenu" -->
+      <!--
+      <button [routerLink]="['/readyedit']" [queryParams]="{view: this.view}" mat-icon-button>
+      -->
+<!--
+      <button mat-icon-button
+        (click)="editReadyQueue($event)"
+        matTooltip="Edit the Ready Queue"
+        aria-label="Button that edits the ready queue audio entries">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button
+        (click)="restoreReadyQueue($event)"
+        matTooltip="Restore Default Ready Queue"
+        aria-label="Button that restores the ready queue to default audio entries">
+        <mat-icon>settings_backup_restore</mat-icon>
+      </button>
+-->
+      <!--
+      <mat-menu #readyQueueMenu="matMenu">
+        <button mat-menu-item *ngFor="let audio of this.audioEntries">
+          <img *ngIf="audio.icon" src="assets/images/{{audio.icon}}">
+          <span class="mat-inline">{{audio.label}}</span>
+        </button>
+      </mat-menu>
+      -->
+<!--
+    </div>
+  </mat-card-header>
+  
+  <mat-card-content>
+      <mat-divider></mat-divider>
+      <span *ngFor="let audio of this.audioEntries">
+      <button
+        (click)="playAudio(audio.source)"
+        mat-raised-button
+        color="{{audio.color ? audio.color : 'primary'}}">
+        <img *ngIf="audio.icon" src="assets/images/{{audio.icon}}">{{audio.label}}</button>
+      </span>
+  </mat-card-content>
+</mat-card>
+-->

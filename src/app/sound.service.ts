@@ -74,6 +74,10 @@ export class SoundService implements OnDestroy {
     }
   }
 
+  /**
+   * Returns an array copy of audio entries filtered by category
+   * @param category 
+   */
   public audioEntriesByCategory(category:AudioCategory): AudioEntry[] {
     let entries:AudioEntry[] = [];
 
@@ -81,9 +85,13 @@ export class SoundService implements OnDestroy {
       return entry.category === category;
     });
 
-    return entries;
+    return Object.assign([], entries);
   }
 
+  /**
+   * Returns an array copy of audio entries filtered by label
+   * @param label 
+   */
   public audioEntriesByLabel(label:string): AudioEntry[] {
     let entries:AudioEntry[] = [];
 
@@ -91,9 +99,13 @@ export class SoundService implements OnDestroy {
       return entry.label === label;
     });
 
-    return entries;
+    return Object.assign([], entries);
   }
 
+  /**
+   * Returns an array copy of audio entries filtered by source
+   * @param source 
+   */
   public audioEntriesBySource(source:string): AudioEntry[] {
     let entries:AudioEntry[] = [];
 
@@ -101,7 +113,27 @@ export class SoundService implements OnDestroy {
       return entry.source === source;
     });
 
-    return entries;
+    return Object.assign([], entries);
+  }
+
+    /**
+   * Returns an array copy of audio entries filtered by label
+   * @param label 
+   */
+  public audioEntryById(id:number): AudioEntry {
+    let entry:AudioEntry = undefined;
+
+    entry = AUDIO_ENTRIES.find(entry => {
+      return entry.id === id;
+    });
+
+    return Object.assign({}, entry);
+  }
+
+  defaultReadyEntries(): AudioEntry[] {
+    return Object.assign([], AUDIO_ENTRIES.filter(entry => {
+      return entry.ready ? entry.ready : false;
+    }));
   }
 
   public isPaused(): boolean {
@@ -198,6 +230,25 @@ export class SoundService implements OnDestroy {
     }
   }
   
+  public sort(audioEntries: AudioEntry[]): void {
+    if (audioEntries && (audioEntries.length > 0)) {
+      audioEntries.sort((a: AudioEntry, b: AudioEntry) => {
+        // Sort by label
+        let labelA: string = a.label.toUpperCase(); // ignore upper and lowercase
+        let labelB : string = b.label.toUpperCase(); // ignore upper and lowercase
+
+        if (labelA < labelB) {
+          return -1;
+        }
+        if (labelA > labelB) {
+          return 1;
+        }
+
+        // Labels must be equal
+        return 0;
+      });
+    }
+  }
 
   public stop(): void {
     if (!this.audio.paused) {

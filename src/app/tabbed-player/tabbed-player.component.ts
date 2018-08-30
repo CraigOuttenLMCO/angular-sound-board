@@ -1,10 +1,11 @@
-import { Component, OnInit, OnDestroy, AfterViewInit, HostListener, ElementRef } from '@angular/core';
-import { Input, Output, ViewChild, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Input } from '@angular/core';
 
 import { AUDIO_GROUPS, AudioGroup } from './audio';
 import { SoundService, AudioItem } from '../sound.service';
-import { AudioEntry, AudioCategory } from '../audio';
+import { AudioEntry, AudioCategory, AUDIO_ENTRIES } from '../audio';
 import { Subscription } from 'rxjs/Subscription';
+import { LocalStorageService } from '../local-storage.service';
 
 @Component({
   selector: 'app-tabbed-player',
@@ -13,7 +14,6 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   source: string;
-  readyAudioEntries:AudioEntry[] = [];
   audioGroups:AudioGroup[] = AUDIO_GROUPS;
   selectedTab: number = 0;
 
@@ -52,8 +52,9 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   /** Define the mute status, default false. */
   @Input() muted: boolean = false;
 
-  constructor(private soundService:SoundService) {
-    this.readyAudioEntries = this.groupAudio(AudioCategory.Ready);
+  constructor(
+    private soundService:SoundService,
+    private storageService:LocalStorageService) {
     //console.log('Ready Audio Entries:', this.readyAudioEntries);
    }
 
@@ -81,6 +82,7 @@ export class TabbedPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   groupAudio(category:AudioCategory): AudioEntry[] {
+    // TODO return copy using Object.assign([], array)
     return this.soundService.audioEntriesByCategory(category);
   }
 

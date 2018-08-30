@@ -9,6 +9,7 @@ import { LocalStorageService } from '../local-storage.service';
 import { SoundService, AudioItem } from '../sound.service';
 
 const CUSTOM_AUDIO_CHAINS_KEY: string = "custom.audio.chains";
+const CUSTOM_AUDIO_CHAINS_VERSION: number = 1.0;
 
 interface AudioChain {
   //index: number; TODO
@@ -16,6 +17,7 @@ interface AudioChain {
 }
 
 interface AudioChains {
+  version: number;
   // date: ??? TODO
   size: number;
   chains: AudioChain[];
@@ -170,6 +172,8 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
   private loadAudioChains(): void {
     let audioChains: AudioChains = this.storageService.get(CUSTOM_AUDIO_CHAINS_KEY);
 
+    //console.log('[loadAudioChains] Loaded audio chains:', audioChains);
+
     if (audioChains) {
       audioChains.chains.forEach(chain => {
         let sources: AudioEntry[] = [];
@@ -279,6 +283,7 @@ export class ChainPlayerComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private saveAudioChains(): void {
     let value: AudioChains = {
+      version: CUSTOM_AUDIO_CHAINS_VERSION,
       size: this.customAudioChains.length,
       chains: []
     };
