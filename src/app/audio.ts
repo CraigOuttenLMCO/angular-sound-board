@@ -4,7 +4,7 @@
 	https://www.youtube.com/user/SoundEffectsFactory/videos
 */
 
-/* Current Max ID: 236 */
+/* Current Max ID: 245 */
 
 export enum AudioCategory {
 	Animation = "Animation",
@@ -325,6 +325,12 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	/* F */
 	
 	{
+		id: 239,
+		label: 'Fake News',
+		category: AudioCategory.Voices,
+		source: 'FakeNews.mp3',
+		icon: 'DonaldTrump_29x24.png'
+	}, {
 		id: 46,
 		label: 'Fangirl Squeal',
 		category: AudioCategory.MyLittlePony,
@@ -357,6 +363,12 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		ready: true,
 		source: 'SquishFart.mp3',
 		icon: 'CraigOutten_28x28.png'
+	}, {
+		id: 243,
+		label: 'Fired Him',
+		category: AudioCategory.Voices,
+		source: 'FiredHimImmediately.mp3',
+		icon: 'DonaldTrump_29x24.png'
 	}, {
 		id: 51,
 		label: 'Focus',
@@ -919,6 +931,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		source: 'Motorcycle.mp3',
 		icon: 'HarleyDavidson2_31x24.png'
 	}, {
+		id: 237,
+		label: 'Motorcycle 2',
+		category: AudioCategory.FX,
+		ready: true,
+		source: 'Motorcycle2.mp3',
+		icon: 'HarleyDavidson2_31x24.png'
+	}, {
 		id: 137,
 		label: 'My Dogs Are Barking',
 		category: AudioCategory.TV,
@@ -935,6 +954,18 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	/* N */
 	
 	{
+		id: 242,
+		label: 'Never Been Released',
+		category: AudioCategory.Voices,
+		source: 'NeverBeenReleased.mp3',
+		icon: 'DonaldTrump_29x24.png'
+	}, {
+		id: 241,
+		label: 'Never Been Written',
+		category: AudioCategory.Voices,
+		source: 'NeverBeenWritten.mp3',
+		icon: 'DonaldTrump_29x24.png'
+	}, {
 		id: 139,
 		label: 'Nice Girl',
 		category: AudioCategory.LooneyTunes,
@@ -977,6 +1008,12 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		ready: true,
 		source: 'Nope.mp3',
 		icon: 'ThumbsDown_26x26.png'
+	}, {
+		id: 238,
+		label: 'Not A Fence',
+		category: AudioCategory.Voices,
+		source: 'NotAFence.mp3',
+		icon: 'DonaldTrump_29x24.png'
 	}, {
 		id: 146,
 		label: 'Not The Mama',
@@ -1038,6 +1075,11 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		category: AudioCategory.MyLittlePony,
 		source: 'PartyStarted.mp3',
 		icon: 'PinkiePie_34x24.png'
+	}, {
+		id: 240,
+		label: 'Phony Stuff',
+		category: AudioCategory.Voices,
+		source: 'PhonyStuff.mp3'
 	}, {
 		id: 155,
 		label: 'Put Put Put (Boy)',
@@ -1460,8 +1502,21 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 217,
 		label: 'Wrong',
-		category: AudioCategory.TV,
-		source: 'Wrong.mp3'
+		category: AudioCategory.Voices,
+		source: 'Wrong.mp3',
+		icon: 'DonaldTrump_29x24.png'
+	}, {
+		id: 244,
+		label: 'Wrong 100%',
+		category: AudioCategory.Voices,
+		source: 'Wrong100Percent.mp3',
+		icon: 'DonaldTrump_29x24.png'
+	}, {
+		id: 245,
+		label: 'Wrong 2',
+		category: AudioCategory.Voices,
+		source: 'Wrong2.mp3',
+		icon: 'DonaldTrump_29x24.png'
 	}, {
 		id: 218,
 		label: 'Wrong Wrong Wrong',
