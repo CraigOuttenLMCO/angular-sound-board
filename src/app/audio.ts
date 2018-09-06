@@ -8,10 +8,11 @@
 
 export enum AudioCategory {
 	Animation = "Animation",
+	FX = "FX",
 	Heather = "Heather",
 	LooneyTunes = "Looney Tunes",
 	MyLittlePony = "My Little Pony",
-	TVShows = "TV Shows",
+	TV = "TV",
 	Uncategorized = "Uncategorized",
 	Voices = "Voices",
 	YodelerKid = "Yodeler Kid"
@@ -70,7 +71,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 7,
 		label: 'Aeuhhh',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'TimAllenAeuhhh.mp3',
 		icon: 'TimTaylor_24x24.png'
 	}, {
@@ -98,7 +99,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	{
 		id: 11,
 		label: 'Ba Dum Tss',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		ready: true,
 		source: 'BaDumTss.mp3',
 		icon: 'Drum_24x24.png'
@@ -147,7 +148,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 19,
 		label: 'Bless You',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		ready: true,
 		source: 'BlessYou.mp3',
 		icon: 'Obama_24x24.png'
@@ -173,13 +174,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 23,
 		label: 'Breaker 1-9',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		source: 'Breaker19.mp3',
 		icon: 'SemiTruck_35x24.png'
 	}, {
 		id: 24,
 		label: 'Breaker 1-9 (Full)',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		source: 'Breaker19Full.mp3',
 		icon: 'SemiTruck_35x24.png'
 	}, {
@@ -191,13 +192,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 26,
 		label: 'Burn (Long)',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'Burn2.mp3',
 		icon: 'MichaelKelso_28x28.png'
 	}, {
 		id: 27,
 		label: 'Burn (Short)',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'Burn.mp3',
 		icon: 'MichaelKelso_28x28.png'
 	}, {
@@ -233,7 +234,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 33,
 		label: 'Bye Felisha',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		source: 'ByeFelisha.mp3',
 		icon: 'ByeFelisha_28x28.png'
 	},
@@ -243,7 +244,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	{
 		id: 34,
 		label: 'Cash Me Outside',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		source: 'CashMeOutside.mp3',
 		icon: 'CashMeOutside_28x28.png'
 	}, {
@@ -267,7 +268,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 38,
 		label: 'Convoy',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		source: 'Convoy.mp3',
 		icon: 'SemiTruck_35x24.png'
 	}, {
@@ -279,7 +280,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 40,
 		label: 'Crickets',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		source: 'Crickets.mp3',
 		icon: 'Cricket_38x24.png'
 	},
@@ -289,7 +290,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	{
 		id: 41,
 		label: 'Did I Stutter?',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'DidIStutter.mp3',
 		icon: 'StanleyHudson_24x24.png'
 	}, {
@@ -301,7 +302,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 43,
 		label: 'Dixie Horn',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		source: 'DixieHorn.mp3',
 		icon: 'FX_20x20.png'
 	}, {
@@ -338,21 +339,21 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 48,
 		label: 'Fart (Everyday)',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		ready: true,
 		source: 'EverydayFart.mp3',
 		icon: 'CraigOutten_28x28.png'
 	}, {
 		id: 49,
 		label: 'Fart (Reverb)',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		ready: true,
 		source: 'FartReverb.mp3',
 		icon: 'CraigOutten_28x28.png'
 	}, {
 		id: 50,
 		label: 'Fart (Squish)',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		ready: true,
 		source: 'SquishFart.mp3',
 		icon: 'CraigOutten_28x28.png'
@@ -405,7 +406,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 58,
 		label: 'Glass Breaking',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		source: 'GlassBreaking.mp3',
 		icon: 'FX_20x20.png'
 	}, {
@@ -429,7 +430,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 62,
 		label: 'Good Morning Folks',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		ready: true,
 		source: 'GoodMorningFolks.mp3',
 		icon: 'MichaelFrancis_20x24.png'
@@ -453,7 +454,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 66,
 		label: 'Gunfire',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		source: 'Gunfire.mp3',
 		icon: 'FX_20x20.png'
 	},
@@ -463,7 +464,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	{
 		id: 67,
 		label: 'Hello',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		ready: true,
 		source: 'Hello.mp3',
 		icon: 'OfficePhone_28x24.png'
@@ -524,7 +525,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 77,
 		label: 'Hi Ho Neighbor',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'HiHoNeighbor.mp3',
 		icon: 'TimTaylor_24x24.png'
 	}, {
@@ -642,7 +643,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 96,
 		label: 'I Own The House',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'IOwnTheHouse.mp3',
 		icon: 'RobPoole_24x24_2.png'
 	}, {
@@ -684,13 +685,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 103,
 		label: 'I\'m Not Selling It',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'ImNotSellingIt.mp3',
 		icon: 'RobPoole_24x24_2.png'
 	}, {
 		id: 235,
 		label: 'I\'m Proud Of You',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'ImProudOfYou.mp3'
 	}, {
 		id: 104,
@@ -701,7 +702,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 236,
 		label: 'I\'m Really Proud Of You',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'ImReallyProudOfYou.mp3'
 	}, {
 		id: 105,
@@ -741,7 +742,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 110,
 		label: 'In The Pot',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'InThePot.mp3',
 		icon: 'KevinMalone_28x28.png'
 	}, {
@@ -805,13 +806,13 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	{
 		id: 120,
 		label: 'Just A Moment',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		source: 'JustAMoment.mp3',
 		icon: 'BillLumbergh_28x28.png'
 	}, {
 		id: 121,
 		label: 'Just A Moment (Full)',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		source: 'JustAMomentFull.mp3',
 		icon: 'BillLumbergh_28x28.png'
 	}, {
@@ -867,7 +868,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 129,
 		label: 'Loud Noises',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'LoudNoises.mp3',
 		icon: 'MichaelScott_28x28.png'
 	},
@@ -895,7 +896,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 133,
 		label: 'Meatloaf',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'Meatloaf.mp3',
 		icon: 'WillFerrell_18x28.png'
 	}, {
@@ -913,20 +914,20 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 136,
 		label: 'Motorcycle',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		ready: true,
 		source: 'Motorcycle.mp3',
 		icon: 'HarleyDavidson2_31x24.png'
 	}, {
 		id: 137,
 		label: 'My Dogs Are Barking',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'MyDogsAreBarking.mp3',
 		icon: 'KevinMalone_28x28.png'
 	}, {
 		id: 138,
 		label: 'My Precious',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		source: 'MyPrecious.mp3',
 		icon: 'Gollum_24x24.png'
 	},
@@ -966,20 +967,20 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 144,
 		label: 'No God No',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'NoGodNo.mp3',
 		icon: 'MichaelScott_28x28.png'
 	}, {
 		id: 145,
 		label: 'Nope',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		ready: true,
 		source: 'Nope.mp3',
 		icon: 'ThumbsDown_26x26.png'
 	}, {
 		id: 146,
 		label: 'Not The Mama',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'NotTheMama.mp3',
 		icon: 'BebeDinosaurio_28x24.png'
 	},
@@ -995,7 +996,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 148,
 		label: 'Oh Hell No',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'OhHellNo.mp3',
 		icon: 'CrystalMiller2_19x24.png'
 	}, {
@@ -1094,7 +1095,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 163,
 		label: 'Run Away',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		source: 'RunAway.mp3',
 		icon: 'HolyGrail_13x24.png'
 	},
@@ -1104,7 +1105,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	{
 		id: 164,
 		label: 'Say What',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'SayWhat.mp3'
 	}, {
 		id: 165,
@@ -1148,14 +1149,14 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 171,
 		label: 'Shh (Knock Knock)',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		ready: true,
 		source: 'ShhKnockKnock.mp3',
 		icon: 'DrEvil_28x28.png'
 	}, {
 		id: 172,
 		label: 'Shh (Little Story)',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		ready: true,
 		source: 'ShhLittleStory.mp3',
 		icon: 'DrEvil_28x28.png'
@@ -1183,7 +1184,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 176,
 		label: 'Shh (Whole Bag)',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		ready: true,
 		source: 'ShhWholeBag.mp3',
 		icon: 'DrEvil_28x28.png'
@@ -1221,7 +1222,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 182,
 		label: 'Slide Whistle',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		source: 'SlideWhistle.mp3',
 		icon: 'FX_20x20.png'
 	}, {
@@ -1233,7 +1234,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 184,
 		label: 'Snoring',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		source: 'Snoring.mp3',
 		icon: 'FX_20x20.png'
 	}, {
@@ -1258,7 +1259,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 188,
 		label: 'Stinky Blanket Burn',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'StinkyBlanketBurn.mp3',
 		icon: 'MichaelKelso_28x28.png'
 	}, {
@@ -1328,25 +1329,25 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 199,
 		label: 'Tire Screech',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		source: 'TireScreech.mp3',
 		icon: 'FX_20x20.png'
 	}, {
 		id: 200,
 		label: 'Triple Decker Burn',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'TripleDeckerBurn.mp3',
 		icon: 'MichaelKelso_28x28.png'
 	}, {
 		id: 233,
 		label: 'Truck Horn 1',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		source: 'TruckHorn1.mp3',
 		icon: 'SemiTruck_35x24.png'
 	}, {
 		id: 234,
 		label: 'Truck Horn 2',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.FX,
 		source: 'TruckHorn2.mp3',
 		icon: 'SemiTruck_35x24.png'
 	},
@@ -1382,7 +1383,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 204,
 		label: 'Want An M&M?',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'WantAnMnM.mp3',
 		icon: 'KevinMalone_28x28.png'
 	}, {
@@ -1394,19 +1395,19 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 206,
 		label: 'Welcome To Arbutus (Female)',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'WelcomeToArbutus-Daisy-39404548.mp3',
 		icon: 'RobPoole_24x24_2.png'
 	}, {
 		id: 207,
 		label: 'Welcome To Arbutus (Male)',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'WelcomeToArbutus-John-39404677.mp3',
 		icon: 'RobPoole_24x24_2.png'
 	}, {
 		id: 208,
 		label: 'What!',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'What.mp3'
 	}, {
 		id: 209,
@@ -1459,12 +1460,12 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 217,
 		label: 'Wrong',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.TV,
 		source: 'Wrong.mp3'
 	}, {
 		id: 218,
 		label: 'Wrong Wrong Wrong',
-		category: AudioCategory.TVShows,
+		category: AudioCategory.TV,
 		source: 'WrongWrongWrong.mp3',
 		icon: 'DrPerryCox_18x28.png'
 	},
@@ -1500,7 +1501,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 223,
 		label: 'Yaaaaaaay',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'Yay.mp3',
 		icon: 'Cheering_19x28.png'
 	}, {
@@ -1512,7 +1513,7 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 225,
 		label: 'Yeah',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		source: 'Yeah.mp3'
 	}, {
 		id: 226,
@@ -1535,21 +1536,21 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	}, {
 		id: 229,
 		label: 'You\'re Welcome',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		ready: true,
 		source: 'YoureWelcome.mp3',
 		icon: 'Obama_24x24.png'
 	}, {
 		id: 230,
 		label: 'You\'re Welcome 2',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		ready: true,
 		source: 'YoureWelcome2.mp3',
 		icon: 'Obama_24x24.png'
 	}, {
 		id: 232,
 		label: 'You\'re Welcome 3',
-		category: AudioCategory.Uncategorized,
+		category: AudioCategory.Voices,
 		ready: true,
 		source: 'YoureWelcome3.mp3',
 		icon: 'Obama_24x24.png'

@@ -13,6 +13,9 @@ export const AUDIO_GROUPS:AudioGroup[] = [
   }, { // Animation
     category: AudioCategory.Animation,
     icon: 'TheMinion_21x28.png'
+  }, { // FX
+    category: AudioCategory.FX,
+    icon: 'FX_20x20.png'
   }, { // Heather
     category: AudioCategory.Heather,
     icon: 'HeatherFleischmann2_24x42.png'
@@ -22,8 +25,8 @@ export const AUDIO_GROUPS:AudioGroup[] = [
   }, { // My Little Pony
     category: AudioCategory.MyLittlePony,
     icon: 'PinkiePie_34x24.png',
-  }, { // TV Shows
-    category: AudioCategory.TVShows,
+  }, { // TV
+    category: AudioCategory.TV,
     icon: 'MichaelScott_28x28.png',
   }, { // Voices
     category: AudioCategory.Voices,

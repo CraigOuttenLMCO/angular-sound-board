@@ -48,17 +48,23 @@ export class ReadyQueueComponent implements OnInit, OnDestroy, AfterViewInit {
           if (retrieve.audioEntries.length > 0) {
             retrieve.audioEntries.forEach(entry => {
               //console.log('entry', entry);
-              const audioEntry: AudioEntry = {
-                id: entry.id,
-                label: entry.label,
-                category: entry.category,
-                ready: entry.ready,
-                source: entry.source,
-                color: entry.color,
-                icon: entry.icon
-              };
+              let found: AudioEntry = entry.id ? 
+                this.soundService.audioEntryById(entry.id) :
+                this.soundService.audioEntryBySource(entry.source);
 
-              this.audioEntries.push(audioEntry);
+              if (found) {
+                const audioEntry: AudioEntry = {
+                  id: found.id,
+                  label: found.label,
+                  category: found.category,
+                  ready: found.ready,
+                  source: found.source,
+                  color: found.color,
+                  icon: found.icon
+                };
+
+                this.audioEntries.push(audioEntry);
+              }
             });
           }
         } else {
@@ -113,6 +119,7 @@ export class ReadyQueueComponent implements OnInit, OnDestroy, AfterViewInit {
           return ready.source === entry.source;
         }
       });
+      
       const selected: boolean = result ? true : false;
 
       let audioOption: AudioEntryOption = {

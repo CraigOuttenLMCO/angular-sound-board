@@ -106,14 +106,14 @@ export class SoundService implements OnDestroy {
    * Returns an array copy of audio entries filtered by source
    * @param source 
    */
-  public audioEntriesBySource(source:string): AudioEntry[] {
-    let entries:AudioEntry[] = [];
+  public audioEntryBySource(source:string): AudioEntry {
+    let entry:AudioEntry = undefined;
 
-    entries = AUDIO_ENTRIES.filter(entry => {
+    entry = AUDIO_ENTRIES.find(entry => {
       return entry.source === source;
     });
 
-    return Object.assign([], entries);
+    return Object.assign({}, entry);
   }
 
     /**
