@@ -23,6 +23,14 @@
       aria-label="Button that restores the ready queue to default audio entries">
       <mat-icon>settings_backup_restore</mat-icon>
     </button>
+    <!-- Random Sound -->
+    <button mat-icon-button
+      (click)="randomAudio($event)"
+      *ngIf="random"
+      matTooltip="Play Random Audio"
+      aria-label="Button that plays a random audio entry">
+      <mat-icon>casino</mat-icon>
+    </button>
   </mat-card-title>
 
   <mat-card-content>

@@ -14,6 +14,7 @@ import { SoundService } from './sound.service';
 import { ChainPlayerComponent } from './chain-player/chain-player.component';
 import { EditReadyQueueComponent } from './edit-ready-queue/edit-ready-queue.component';
 import { ReadyQueueComponent } from './ready-queue/ready-queue.component';
+import { SnackBarAudioComponent } from './ready-queue/snack-bar-audio.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +23,12 @@ import { ReadyQueueComponent } from './ready-queue/ready-queue.component';
     TabbedPlayerComponent,
     ChainPlayerComponent,
     EditReadyQueueComponent,
-    ReadyQueueComponent
+    ReadyQueueComponent,
+    SnackBarAudioComponent
   ],
   entryComponents: [
-    EditReadyQueueComponent
+    EditReadyQueueComponent,
+    SnackBarAudioComponent
   ],
   imports: [
     BrowserModule,

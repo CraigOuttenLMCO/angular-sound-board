@@ -2,9 +2,11 @@ import { Component, OnInit, Input, OnDestroy, AfterViewInit } from '@angular/cor
 import { AudioEntry, AUDIO_ENTRIES } from '../audio';
 import { LocalStorageService } from '../local-storage.service';
 import { SoundService, AudioItem } from '../sound.service';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSnackBarRef } from '@angular/material';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material';
 import { AudioEntryOption, EditReadyQueueDialogData, EditReadyQueueComponent } from '../edit-ready-queue/edit-ready-queue.component';
 import { Subscription } from 'rxjs/Subscription';
+import { SnackBarAudioComponent } from './snack-bar-audio.component';
 
 const READY_QUEUE_AUDIO_ENTRIES_KEY: string = "ready.queue.audio.entries";
 const READY_QUEUE_AUDIO_ENTRIES_VERSION: number = 1.1;
@@ -24,6 +26,9 @@ export class ReadyQueueComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() stopButton: boolean = true;
   @Input() collapsed: boolean = false; // TODO add support
   @Input() editable: boolean = true;
+  @Input() random: boolean = true;
+  // valid entries: none, short (duration of 1.5s), duration (audio length)
+  @Input() snackBarBehavior: string = 'duration';
 
   audioEntries: AudioEntry[] = [];
 
@@ -31,10 +36,16 @@ export class ReadyQueueComponent implements OnInit, OnDestroy, AfterViewInit {
   audioCompleteSubscription: Subscription;
   playing: boolean = false;
 
+  // SnackBar
+  snackBarRef: MatSnackBarRef<SnackBarAudioComponent>;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+
   constructor(
     private soundService:SoundService,
     private storageService:LocalStorageService,
-    private dialog: MatDialog) {
+    private dialog: MatDialog,
+    public snackBar: MatSnackBar) {
   }
 
   ngOnInit() {
@@ -87,6 +98,10 @@ export class ReadyQueueComponent implements OnInit, OnDestroy, AfterViewInit {
 
     this.audioCompleteSubscription = this.soundService.audioComplete.subscribe(() => {
       this.playing = false;
+
+      if (this.snackBarRef && (this.snackBarBehavior === 'duration')) {
+        this.snackBarRef.dismiss();
+      }
     });
   }
 
@@ -182,6 +197,28 @@ export class ReadyQueueComponent implements OnInit, OnDestroy, AfterViewInit {
       source: "assets/audio/" + file,
       volume: 1.0
     };
+
+    this.soundService.playAudio(item);
+  }
+
+  randomAudio(event:any): void {
+    const random: AudioEntry = AUDIO_ENTRIES[Math.floor(Math.random() * AUDIO_ENTRIES.length)];
+    const item:AudioItem = {
+      source: "assets/audio/" + random.source,
+      volume: 1.0
+    };
+
+    if (this.snackBarBehavior !== 'none') {
+      let duration:number = (this.snackBarBehavior === 'short') ? 1500 : undefined;
+
+      // Show SnackBar
+      this.snackBarRef = this.snackBar.openFromComponent(SnackBarAudioComponent, {
+        duration: duration,
+        data: random,
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition
+      });
+    }
 
     this.soundService.playAudio(item);
   }
