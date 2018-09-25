@@ -1079,7 +1079,8 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		id: 240,
 		label: 'Phony Stuff',
 		category: AudioCategory.Voices,
-		source: 'PhonyStuff.mp3'
+		source: 'PhonyStuff.mp3',
+		icon: 'DonaldTrump_29x24.png'
 	}, {
 		id: 155,
 		label: 'Put Put Put (Boy)',
