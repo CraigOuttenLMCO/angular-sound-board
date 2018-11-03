@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter, OnDestroy } from '@angular/core';
 import { AUDIO_ENTRIES, AudioEntry, AudioCategory } from './audio';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 export interface AudioEvent /*extends Event*/ {
   type: string;

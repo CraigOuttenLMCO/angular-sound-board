@@ -4,7 +4,7 @@ import { Input, Output, ViewChild } from '@angular/core';
 import { AUDIO_GROUPS, AudioGroup } from './audio';
 import { SoundService, AudioItem } from '../sound.service';
 import { AudioEntry, AudioCategory } from '../audio';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-player',

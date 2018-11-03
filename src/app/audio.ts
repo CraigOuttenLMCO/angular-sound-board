@@ -4,7 +4,7 @@
 	https://www.youtube.com/user/SoundEffectsFactory/videos
 */
 
-/* Current Max ID: 245 */
+/* Current Max ID: 246 */
 
 export enum AudioCategory {
 	Animation = "Animation",
@@ -22,7 +22,7 @@ export interface AudioEntry {
 	id: number;
 	label: string;
 	category: AudioCategory;
-	ready?: boolean;
+	ready?: boolean; // if true, place in the ready queue
 	source: string;
 	color?: string; // this should default to 'primary'
 	icon?: string;
@@ -1141,6 +1141,12 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		category: AudioCategory.TV,
 		source: 'RunAway.mp3',
 		icon: 'HolyGrail_13x24.png'
+	}, {
+		id: 246,
+		label: 'Ryan Meeting',
+		category: AudioCategory.Voices,
+		source: 'RyanHasJoinedTheMeeting.mp3',
+		ready: true
 	},
 	
 	/* S */

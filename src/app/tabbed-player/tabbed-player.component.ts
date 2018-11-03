@@ -4,7 +4,7 @@ import { Input } from '@angular/core';
 import { AUDIO_GROUPS, AudioGroup } from './audio';
 import { SoundService, AudioItem } from '../sound.service';
 import { AudioEntry, AudioCategory, AUDIO_ENTRIES } from '../audio';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 import { LocalStorageService } from '../local-storage.service';
 
 @Component({

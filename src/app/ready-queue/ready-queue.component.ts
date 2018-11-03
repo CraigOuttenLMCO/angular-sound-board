@@ -5,7 +5,7 @@ import { SoundService, AudioItem } from '../sound.service';
 import { MatDialog, MatSnackBarRef } from '@angular/material';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material';
 import { AudioEntryOption, EditReadyQueueDialogData, EditReadyQueueComponent } from '../edit-ready-queue/edit-ready-queue.component';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 import { SnackBarAudioComponent } from './snack-bar-audio.component';
 
 const READY_QUEUE_AUDIO_ENTRIES_KEY: string = "ready.queue.audio.entries";
