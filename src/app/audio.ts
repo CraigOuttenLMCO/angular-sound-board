@@ -4,7 +4,7 @@
 	https://www.youtube.com/user/SoundEffectsFactory/videos
 */
 
-/* Current Max ID: 246 */
+/* Current Max ID: 254 */
 
 export enum AudioCategory {
 	Animation = "Animation",
@@ -816,6 +816,18 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 	/* J */
 	
 	{
+		id: 251,
+		label: 'Joined The Conference',
+		category: AudioCategory.Voices,
+		source: 'HasJoinedTheConference.mp3',
+		ready: false
+	}, {
+		id: 252,
+		label: 'Joined The Meeting',
+		category: AudioCategory.Voices,
+		source: 'HasJoinedTheMeeting.mp3',
+		ready: false
+	}, {
 		id: 120,
 		label: 'Just A Moment',
 		category: AudioCategory.TV,
@@ -853,6 +865,18 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		category: AudioCategory.LooneyTunes,
 		source: 'LayDownYourArms.mp3',
 		icon: 'YosemiteSam_24x24.png'
+	}, {
+		id: 253,
+		label: 'Left The Conference',
+		category: AudioCategory.Voices,
+		source: 'HasLeftTheConference.mp3',
+		ready: false
+	}, {
+		id: 254,
+		label: 'Left The Meeting',
+		category: AudioCategory.Voices,
+		source: 'HasLeftTheMeeting.mp3',
+		ready: false
 	}, {
 		id: 125,
 		label: 'Let Me Out Of Here',
@@ -1142,10 +1166,34 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		source: 'RunAway.mp3',
 		icon: 'HolyGrail_13x24.png'
 	}, {
-		id: 246,
-		label: 'Ryan Meeting',
+		id: 250,
+		label: 'Ryan Bower',
 		category: AudioCategory.Voices,
-		source: 'RyanHasJoinedTheMeeting.mp3',
+		source: 'RyanBower.mp3',
+		ready: false
+	}, {
+		id: 247,
+		label: 'Ryan Join Conference',
+		category: AudioCategory.Voices,
+		source: 'RyanBowerHasJoinedTheConference.mp3',
+		ready: false
+	}, {
+		id: 246,
+		label: 'Ryan Join Meeting',
+		category: AudioCategory.Voices,
+		source: 'RyanBowerHasJoinedTheMeeting.mp3',
+		ready: true
+	}, {
+		id: 248,
+		label: 'Ryan Left Conference',
+		category: AudioCategory.Voices,
+		source: 'RyanBowerHasLeftTheConference.mp3',
+		ready: false
+	}, {
+		id: 249,
+		label: 'Ryan Left Meeting',
+		category: AudioCategory.Voices,
+		source: 'RyanBowerHasLeftTheMeeting.mp3',
 		ready: true
 	},
 	
