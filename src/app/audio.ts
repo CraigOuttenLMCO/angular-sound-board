@@ -4,7 +4,7 @@
 	https://www.youtube.com/user/SoundEffectsFactory/videos
 */
 
-/* Current Max ID: 254 */
+/* Current Max ID: 265 */
 
 export enum AudioCategory {
 	Animation = "Animation",
@@ -822,10 +822,22 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		source: 'HasJoinedTheConference.mp3',
 		ready: false
 	}, {
+		id: 259,
+		label: 'Joined The Conversation',
+		category: AudioCategory.Voices,
+		source: 'HasJoinedTheConversation.mp3',
+		ready: false
+	}, {
 		id: 252,
 		label: 'Joined The Meeting',
 		category: AudioCategory.Voices,
 		source: 'HasJoinedTheMeeting.mp3',
+		ready: false
+	}, {
+		id: 260,
+		label: 'Joined The Standup',
+		category: AudioCategory.Voices,
+		source: 'HasJoinedTheStandup.mp3',
 		ready: false
 	}, {
 		id: 120,
@@ -872,10 +884,22 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		source: 'HasLeftTheConference.mp3',
 		ready: false
 	}, {
+		id: 261,
+		label: 'Left The Conversation',
+		category: AudioCategory.Voices,
+		source: 'HasLeftTheConversation.mp3',
+		ready: false
+	}, {
 		id: 254,
 		label: 'Left The Meeting',
 		category: AudioCategory.Voices,
 		source: 'HasLeftTheMeeting.mp3',
+		ready: false
+	}, {
+		id: 262,
+		label: 'Left The Standup',
+		category: AudioCategory.Voices,
+		source: 'HasLeftTheStandup.mp3',
 		ready: false
 	}, {
 		id: 125,
@@ -1160,6 +1184,20 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		source: 'RingChimeSingle.mp3',
 		icon: 'RingSecurity_24x24.png'
 	}, {
+		id: 264,
+		label: 'Rob Poole',
+		category: AudioCategory.Voices,
+		source: 'RobPoole.mp3',
+		ready: false,
+		icon: 'RobPoole_24x24_2.png'
+	}, {
+		id: 265,
+		label: 'Rob Poole III',
+		category: AudioCategory.Voices,
+		source: 'RobPooleIII.mp3',
+		ready: false,
+		icon: 'RobPoole_24x24_2.png'
+	}, {
 		id: 163,
 		label: 'Run Away',
 		category: AudioCategory.TV,
@@ -1172,10 +1210,22 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		source: 'RyanBower.mp3',
 		ready: false
 	}, {
+		id: 263,
+		label: 'Ryan Bower 2',
+		category: AudioCategory.Voices,
+		source: 'RyanBower2.mp3',
+		ready: false
+	}, {
 		id: 247,
 		label: 'Ryan Join Conference',
 		category: AudioCategory.Voices,
 		source: 'RyanBowerHasJoinedTheConference.mp3',
+		ready: false
+	}, {
+		id: 255,
+		label: 'Ryan Join Conversation',
+		category: AudioCategory.Voices,
+		source: 'RyanBowerHasJoinedTheConversation.mp3',
 		ready: false
 	}, {
 		id: 246,
@@ -1184,16 +1234,34 @@ export const AUDIO_ENTRIES:AudioEntry[] = [
 		source: 'RyanBowerHasJoinedTheMeeting.mp3',
 		ready: true
 	}, {
+		id: 256,
+		label: 'Ryan Join Standup',
+		category: AudioCategory.Voices,
+		source: 'RyanBowerHasJoinedTheStandup.mp3',
+		ready: true
+	}, {
 		id: 248,
 		label: 'Ryan Left Conference',
 		category: AudioCategory.Voices,
 		source: 'RyanBowerHasLeftTheConference.mp3',
 		ready: false
 	}, {
+		id: 257,
+		label: 'Ryan Left Conversation',
+		category: AudioCategory.Voices,
+		source: 'RyanBowerHasLeftTheConversation.mp3',
+		ready: false
+	}, {
 		id: 249,
 		label: 'Ryan Left Meeting',
 		category: AudioCategory.Voices,
 		source: 'RyanBowerHasLeftTheMeeting.mp3',
+		ready: true
+	}, {
+		id: 258,
+		label: 'Ryan Left Standup',
+		category: AudioCategory.Voices,
+		source: 'RyanBowerHasLeftTheStandup.mp3',
 		ready: true
 	},
 	
