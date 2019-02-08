@@ -1,6 +1,6 @@
 {
   "name": "angular-sound-board",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "main": "main.js",
   "scripts": {
     "ng": "ng",
